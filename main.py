@@ -13,6 +13,14 @@ def selamat_datang(message):
    chatid = message.chat.id
    bot.send_message(chatid, 'Selamat Datang')
 
+@bot.message_handler(content_types=['sticker'])
+def handle_sticker(message):
+    bot.send_sticker(message.chat.id, message.sticker.file_id)
+
+@bot.message_handler(func=lambda message: True)
+def handle_all_message(message):
+	bot.reply_to(message, message.text)
+
 @bot.message_handler(commands=['google'])
 def google(message):
    data = message.text.replace('/google', "")
