@@ -48,7 +48,7 @@ Alamat = {}
 Wilayah = {}
 No. Telepon = {}
 '''.format(nam, koders, almt, wlyh, tlpn))
-      if Wilayah.upper() in wilayah.upper():
+      if Wilayah.upper() in wlyh.upper():
          bot.reply_to(message, data)
       else:
          pass
