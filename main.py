@@ -35,11 +35,11 @@ def covid(message):
    page_json = page.json()
    features = page_json['features']
    for i in features:
-      nama = i['type']['Feature']['properties']['nama']
-      koders =  i['type']['Feature']['properties']['kode_rs']
-      almt = i['type']['Feature']['properties']['alamat']
-      wilayah = i['type']['Feature']['properties']['wilayah']
-      tlpn = i['type']['Feature']['properties']['telepon']
+      nama = i['type']['nama']
+      koders =  i['type']['kode_rs']
+      almt = i['type']['alamat']
+      wilayah = i['type']['wilayah']
+      tlpn = i['type']['telepon']
       data = ('''
 Nama rumah rakit = {}
 Kode rumah sakit = {}
