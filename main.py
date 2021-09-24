@@ -28,7 +28,7 @@ def handle_sticker(message):
       
     # menu Akses ke layanan kesehatan terdekat  
 @bot.message_handler(commands=['rumahsakit'])
-def covid(message):
+def rumahsakit(message):
    texts = message.text
    wilayh = texts[7:]
    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
