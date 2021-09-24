@@ -6,7 +6,18 @@ from googlesearch import search
 api = '2021833578:AAFsk5f2SdbsY_1MXn00ORp8oaabY0YCJcY'
 bot = telebot.TeleBot(api)
 
+def get_url():
+    contents = requests.get('https://thatcopy.pw/catapi/rest/').json()
+    image_url = contents['url']
+    return image_url
 
+def get_fact():
+    contents = requests.get('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1').json()
+    fact = contents['text']
+    if len(fact) < 10:
+        return get_fact()
+    return fact
+   
 @bot.message_handler(commands=['start'])
 def selamat_datang(message):
    bot.reply_to(message, 'Hai saya ICA (Indonesia Covid Assistant)')
