@@ -27,7 +27,7 @@ def handle_sticker(message):
     bot.send_sticker(message.chat.id, message.sticker.file_id)
       
     # menu Akses ke layanan kesehatan terdekat  
-@bot.message_handler(commands=['rumahsakit'])
+@bot.message_handler(commands=['rs'])
 def rumahsakit(message):
    texts = message.text
    Wilayah = texts[7:]
@@ -40,6 +40,7 @@ def rumahsakit(message):
       almt = i['attributes']['alamat']
       wlyh = i['attributes']['wilayah']
       tlpn = i['attributes']['telepon']
+      
       data = ('''
 Nama rumah rakit = {}
 Kode rumah sakit = {}
