@@ -17,6 +17,11 @@ def selamat_datang(message):
 def handle_sticker(message):
     bot.send_sticker(message.chat.id, message.sticker.file_id)
 
+@bot.message_handler(commands = ['meow'])
+def meow(message):
+    url = get_url()
+    bot.send_photo(message.chat.id, url)
+
 @bot.message_handler(commands=['google'])
 def google(message):
    data = message.text.replace('/google', "")
