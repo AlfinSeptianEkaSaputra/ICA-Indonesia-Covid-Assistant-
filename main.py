@@ -1,6 +1,5 @@
 from telebot import *
 import requests
-import json
 from googlesearch import search
 
 
