@@ -31,7 +31,7 @@ def handle_sticker(message):
 @bot.message_handler(commands=['rumahsakit'])
 def rumahsakit(message):
    texts = message.text
-   wlyah = texts[]
+   Wilayah = texts[7:]
    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
    page_json = page.json()
    Features = page_json['features']
@@ -48,7 +48,7 @@ Alamat = {}
 Wilayah = {}
 No. Telepon = {}
 '''.format(nam, koders, almt, wlyh, tlpn))
-      if wlyah.upper() in wlyh.upper():
+      if Wilayah.upper() in wilayah.upper():
          bot.reply_to(message, data)
       else:
          pass
