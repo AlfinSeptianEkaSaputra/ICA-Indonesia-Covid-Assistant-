@@ -27,7 +27,7 @@ def handle_sticker(message):
     bot.send_sticker(message.chat.id, message.sticker.file_id)
       
     # menu Akses ke layanan kesehatan terdekat  
-@bot.message_handler(commands=['rumahsakit'])
+@bot.message_handler(commands=['rs'])
 def faskes(message):
    texts = message.text
    Wilayah = texts[7:]
