@@ -33,8 +33,8 @@ def rumahsakit(message):
    Wilayah = texts[7:]
    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
    page_json = page.json()
-   Features = page_json['features']
-   for i in Features:
+   features = page_json['features']
+   for i in features:
       nam = i['attributes']['nama']
       koders =  i['attributes']['kode_rs']
       almt = i['attributes']['alamat']
