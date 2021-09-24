@@ -31,7 +31,7 @@ def handle_sticker(message):
 def covid(message):
    texts = message.text
    alamat = texts[7:]
-   page = requests.get('https://opendata.arcgis.com/datasets/263744bee5ad4c27ad57e6c0f4b807c3_0.geojson')
+   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
    page_json = page.json()
    features = page_json['features']
    for i in features:
