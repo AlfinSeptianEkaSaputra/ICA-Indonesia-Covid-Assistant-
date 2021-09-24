@@ -13,29 +13,9 @@ def selamat_datang(message):
    chatid = message.chat.id
    bot.send_message(chatid, 'Selamat Datang')
 
-@bot.message_handler(commands = ['fact'])
-def fact(message):
-    fact = get_fact()
-    bot.send_message(message.chat.id, fact)
-def get_fact():
-    contents = requests.get('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1').json()
-    fact = contents['text']
-    if len(fact) < 10:
-        return get_fact()
-    return fact
-
 @bot.message_handler(content_types=['sticker'])
 def handle_sticker(message):
     bot.send_sticker(message.chat.id, message.sticker.file_id)
-
-@bot.message_handler(commands = ['meow'])
-def meow(message):
-    url = get_url()
-    bot.send_photo(message.chat.id, url)
-def get_url():
-    contents = requests.get('https://thatcopy.pw/catapi/rest/').json()
-    image_url = contents['url']
-    return image_url
 
 @bot.message_handler(commands=['google'])
 def google(message):
