@@ -23,6 +23,10 @@ def selamat_datang(message):
    bot.reply_to(message, 'Hai saya ICA (Indonesia Covid Assistant)')
    chatid = message.chat.id
    bot.send_message(chatid, 'Selamat Datang')
+@bot.message_handler(commands = ['fact'])
+def fact(message):
+    fact = get_fact()
+    bot.send_message(message.chat.id, fact)
 
 @bot.message_handler(content_types=['sticker'])
 def handle_sticker(message):
