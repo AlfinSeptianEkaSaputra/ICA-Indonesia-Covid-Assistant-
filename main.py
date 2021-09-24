@@ -46,7 +46,7 @@ Kode rumah sakit = {}
 Alamat = {}
 Wilayah = {}
 No. Telepon = {}
-'''.format(nama, koders, almt, wilayah, tlpn))
+'''.format(nama, koders, almt, wlyh, tlpn))
       if wilayh.upper() in wlyh.upper():
          bot.reply_to(message, data)
       else:
