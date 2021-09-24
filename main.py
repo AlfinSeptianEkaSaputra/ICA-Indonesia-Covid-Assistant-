@@ -1,5 +1,6 @@
 from telebot import *
 import requests
+import json
 from googlesearch import search
 
 
@@ -78,10 +79,8 @@ Dirawat = {}
       else:
          pass
 
-   # Set up the logging
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
-logging.info('Starting Bot...')
-bot.polling(True)
+
+bot.polling()
 
 
 
