@@ -6,24 +6,53 @@ from googlesearch import search
 api = '2021833578:AAFsk5f2SdbsY_1MXn00ORp8oaabY0YCJcY'
 bot = telebot.TeleBot(api)
 
-   
+   #menu start
 @bot.message_handler(commands=['start'])
 def selamat_datang(message):
    bot.reply_to(message, 'Hai saya ICA (Indonesia Covid Assistant)')
    chatid = message.chat.id
    bot.send_message(chatid, 'Selamat Datang')
-
-@bot.message_handler(content_types=['sticker'])
-def handle_sticker(message):
-    bot.send_sticker(message.chat.id, message.sticker.file_id)
-
+   
+   #menu google
 @bot.message_handler(commands=['google'])
 def google(message):
    data = message.text.replace('/google', "")
    x = search(data, num_results=2)
    for i in x:
       bot.send_message(message.chat.id, i)
+      
+   #sticker
+@bot.message_handler(content_types=['sticker'])
+def handle_sticker(message):
+    bot.send_sticker(message.chat.id, message.sticker.file_id)
+      
+    # menu Akses ke layanan kesehatan terdekat  
+@bot.message_handler(commands=['rumahsakit'])
+def covid(message):
+   alamat = message.text
+   provinsi = texts[7:]
+   page = requests.get('https://opendata.arcgis.com/datasets/263744bee5ad4c27ad57e6c0f4b807c3_0.geojson')
+   page_json = page.json()
+   features = page_json['features']
+   for i in features:
+      nama = i['properties']['nama']
+      koders =  i['properties']['kode_rs']
+      almt = i['properties']['alamat']
+      wilayah = i['properties']['wilayah']
+      tlpn = i['properties']['telepon']
+      data = ('''
+Nama rumah rakit = {}
+Kode rumah sakit = {}
+Alamat = {}
+Wilayah= {}
+No. Telepon = {}
+'''.format(nama, koders, almt, wilayah, tlpn))
+      if alamat.upper() in almt.upper():
+         bot.reply_to(message, data)
+      else:
+         pass
 
+    # menu angka penyebaran covid setiap provinsi
 @bot.message_handler(commands=['covid'])
 def covid(message):
    texts = message.text
@@ -49,7 +78,7 @@ Dirawat = {}
       else:
          pass
 
-# Set up the logging
+   # Set up the logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logging.info('Starting Bot...')
 bot.polling(True)
