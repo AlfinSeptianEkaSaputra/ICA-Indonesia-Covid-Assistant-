@@ -27,8 +27,8 @@ def handle_sticker(message):
     bot.send_sticker(message.chat.id, message.sticker.file_id)
       
     # menu Akses ke layanan kesehatan terdekat  
-@bot.message_handler(commands=['rs'])
-def rumahsakit(message):
+@bot.message_handler(commands=['rumahsakit'])
+def faskes(message):
    texts = message.text
    Wilayah = texts[7:]
    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,kode_rs,alamat,wilayah,telepon&outSR=4326&f=json')
