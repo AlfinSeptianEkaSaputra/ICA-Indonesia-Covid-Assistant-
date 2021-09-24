@@ -31,12 +31,12 @@ def handle_sticker(message):
 def rumahsakit(message):
    texts = message.text
    Wilayah = texts[7:]
-   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
+   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,kode_rs,alamat,wilayah,telepon&outSR=4326&f=json')
    page_json = page.json()
    features = page_json['features']
    for i in features:
       nam = i['attributes']['nama']
-      koders =  i['attributes']['kode_rs']
+      koders = i['attributes']['kode_rs']
       almt = i['attributes']['alamat']
       wlyh = i['attributes']['wilayah']
       tlpn = i['attributes']['telepon']
