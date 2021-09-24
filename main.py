@@ -29,8 +29,8 @@ def handle_sticker(message):
     # menu Akses ke layanan kesehatan terdekat  
 @bot.message_handler(commands=['rumahsakit'])
 def covid(message):
-   alamat = message.text
-   provinsi = texts[7:]
+   texts = message.text
+   alamat = texts[7:]
    page = requests.get('https://opendata.arcgis.com/datasets/263744bee5ad4c27ad57e6c0f4b807c3_0.geojson')
    page_json = page.json()
    features = page_json['features']
