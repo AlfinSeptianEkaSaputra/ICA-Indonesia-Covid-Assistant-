@@ -21,12 +21,7 @@ def google(message):
    for i in x:
       bot.send_message(message.chat.id, i)
       
-   #sticker
-bot.on('sticker', (msg) => {
-    return msg.reply.sticker('http://i.imgur.com/VRYdhuD.png', { asReply: true });
-});
-      
-    # menu Akses ke layanan kesehatan terdekat  
+   # menu Akses ke layanan kesehatan terdekat  
 @bot.message_handler(commands=['rumahsakit'])
 def faskes(message):
    texts = message.text
@@ -53,7 +48,7 @@ No. Telepon = {}
       else:
          pass
 
-    # menu angka penyebaran covid setiap provinsi
+   # menu angka penyebaran covid setiap provinsi
 @bot.message_handler(commands=['covid'])
 def covid(message):
    texts = message.text
