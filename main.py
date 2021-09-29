@@ -22,9 +22,9 @@ def google(message):
       bot.send_message(message.chat.id, i)
       
    #sticker
-@bot.message_handler(content_types=['sticker'])
-def handle_sticker(message):
-    bot.send_sticker(message.chat.id, message.sticker.file_id)
+bot.on('sticker', (msg) => {
+    return msg.reply.sticker('http://i.imgur.com/VRYdhuD.png', { asReply: true });
+});
       
     # menu Akses ke layanan kesehatan terdekat  
 @bot.message_handler(commands=['rumahsakit'])
