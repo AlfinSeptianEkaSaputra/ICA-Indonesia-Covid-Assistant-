@@ -2,7 +2,6 @@ import api as keys
 from telegram.ext import *
 import responses as R
 
-
 #print("Bot Berjalan")
 
 def start_command(update, context):
