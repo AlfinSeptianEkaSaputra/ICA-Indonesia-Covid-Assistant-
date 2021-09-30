@@ -7,21 +7,7 @@ def sample_responses(input_text, namauser):
     sapaan = ["halo", "hi", "hai", "selamat pagi"]
     covidinfo = ["covid", "info covid", "covid 19", "covid-19", "gejala covid"]
     pamitan = ["sampai jumpa", "bye"]
-    #=========================================
-
-    #======================================
-    #Eksekusi
-    if pesan_user in sapaan:
-        return f"Halo {namauser}!!"
-
-    if pesan_user in covidinfo:
-        return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
-
-    if pesan_user in pamitan:
-        return f"Sampai jumpa {namauser}"
-    
-    
-    if covid(message):
+    covid_info(message):
         texts = message.text
         provinsi = texts[7:]
         page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
@@ -40,6 +26,22 @@ def sample_responses(input_text, namauser):
         Meninggal= {}
         Dirawat = {}
         '''.format(prov, pos, sem, men, dirawat))
+    #=========================================
+
+    #======================================
+    #Eksekusi
+    if pesan_user in sapaan:
+        return f"Halo {namauser}!!"
+
+    #if pesan_user in covidinfo:
+        #return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
+
+    if pesan_user in pamitan:
+        return f"Sampai jumpa {namauser}"
+    
+    
+    
+    if pesan_user in covid_info:
         if provinsi.upper() in prov.upper():
             bot.reply_to(message, data)
         else:
