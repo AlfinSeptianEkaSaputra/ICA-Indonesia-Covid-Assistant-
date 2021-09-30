@@ -1,81 +1,41 @@
-from telebot import *
-import requests
-from googlesearch import search
+import api as keys
+from telegram.ext import *
+import responses as R
+
+#print("Bot Berjalan")
+
+def start_command(update, context):
+    namauser = update.message.chat.first_name
+    update.message.reply_text(f'''Halo {namauser}\n\nSaya adalah >namabot< !\nSaya bisa membantu anda mencari infotmasi tentang Covid 19.\n\nAnda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki''')
+def help_command(update, context):
+    update.message.reply_text('Butuh bantuan? maaf, bot belum dikembangkan sejauh itu')
+
+def handle_message(update, context):
+    text = str(update.message.text).lower()
+    namauser = update.message.chat.first_name
+
+    print(f"{namauser} : Mengirimkan pesan > {text} <")
+
+    response = R.sample_responses(text, namauser)
+
+    update.message.reply_text(response)
 
 
-api = '2021833578:AAFsk5f2SdbsY_1MXn00ORp8oaabY0YCJcY'
-bot = telebot.TeleBot(api)
+def error(update, context):
+    print(f"update {update} menyebabkan error {context.error}")
 
-   #menu start
-@bot.message_handler(commands=['start'])
-def selamat_datang(message):
-   bot.reply_to(message, 'Hai saya ICA (Indonesia Covid Assistant)')
-   chatid = message.chat.id
-   bot.send_message(chatid, 'Selamat Datang')
-   
-   #menu google
-@bot.message_handler(commands=['google'])
-def google(message):
-   data = message.text.replace('/google', "")
-   x = search(data, num_results=2)
-   for i in x:
-      bot.send_message(message.chat.id, i)
-      
-   # menu Akses ke layanan kesehatan terdekat  
-@bot.message_handler(commands=['rumahsakit'])
-def faskes(message):
-   texts = message.text
-   Wilayah = texts[12:]
-   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,kode_rs,alamat,wilayah,telepon&outSR=4326&f=json')
-   page_json = page.json()
-   features = page_json['features']
-   for i in features:
-      nam = i['attributes']['nama']
-      koders = i['attributes']['kode_rs']
-      almt = i['attributes']['alamat']
-      wlyh = i['attributes']['wilayah']
-      tlpn = i['attributes']['telepon']
-      
-      data = ('''
-Nama rumah rakit = {}
-Kode rumah sakit = {}
-Alamat = {}
-Wilayah = {}
-No. Telepon = {}
-'''.format(nam, koders, almt, wlyh, tlpn))
-      if Wilayah.upper() in wlyh.upper():
-         bot.reply_to(message, data)
-      else:
-         pass
+def main():
+    updater = Updater(keys.API_KEY, use_context=True)
+    dp = updater.dispatcher
 
-   # menu angka penyebaran covid setiap provinsi
-@bot.message_handler(commands=['covid'])
-def covid(message):
-   texts = message.text
-   provinsi = texts[7:]
-   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=Provinsi,Kasus_Posi,Kasus_Semb,Kasus_Meni&outSR=4326&f=json')
-   page_json = page.json()
-   features = page_json['features']
-   for i in features:
-      prov = i['attributes']['Provinsi']
-      pos =  i['attributes']['Kasus_Posi']
-      sem = i['attributes']['Kasus_Semb']
-      men = i['attributes']['Kasus_Meni']
-      dirawat = int(pos)-int(sem)-int(men)
-      data = ('''
-Provinsi = {}
-Positif = {}
-Sembuh = {}
-Meninggal= {}
-Dirawat = {}
-'''.format(prov, pos, sem, men, dirawat))
-      if provinsi.upper() in prov.upper():
-         bot.reply_to(message, data)
-      else:
-         pass
+    dp.add_handler(CommandHandler("start", start_command))
+    dp.add_handler(CommandHandler("help", help_command))
 
+    dp.add_handler(MessageHandler(Filters.text, handle_message))
 
-bot.polling()
+    dp.add_error_handler(error)
 
+    updater.start_polling()
+    updater.idle()
 
-
+main()
