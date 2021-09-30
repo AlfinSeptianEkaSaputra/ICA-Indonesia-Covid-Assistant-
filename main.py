@@ -1,6 +1,6 @@
 import api as keys
 from telegram.ext import *
-import responses as R
+import balasan as R
 
 #print("Bot Berjalan")
 
