@@ -40,7 +40,7 @@ def sample_responses(input_text, namauser):
         Dirawat = {}
         '''.format(prov, pos, sem, men, dirawat))
     if provinsi.upper() in prov.upper():
-           .reply_to(message, data)
+           update.message.reply_text(message, data)
     else:
             pass
 
