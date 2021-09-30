@@ -6,7 +6,7 @@ import balasan as R
 
 def start_command(update, context):
     namauser = update.message.chat.first_name
-    update.message.reply_text(f'''Halo {namauser}\n\nSaya adalah ICA(Indonesian Covid Asistant) !\nSaya bisa membantu anda mencari infotmasi tentang Covid 19.\n\nAnda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki''')
+    update.message.reply_text(f'''Halo {namauser}\n\nSaya adalah ICA(Indonesian Covid Asistant) !\nSaya bisa membantu anda mencari informasi tentang Covid 19.\n\nAnda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki''')
 def help_command(update, context):
     update.message.reply_text('Butuh bantuan? maaf, bot belum dikembangkan sejauh itu')
 
