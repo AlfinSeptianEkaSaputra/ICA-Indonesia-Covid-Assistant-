@@ -7,6 +7,19 @@ def sample_responses(input_text, namauser):
     sapaan = ["halo", "hi", "hai", "selamat pagi"]
     covidinfo = ["covid", "info covid", "covid 19", "covid-19", "gejala covid"]
     pamitan = ["sampai jumpa", "bye"]
+    #=========================================
+
+    #======================================
+    #Eksekusi
+    if pesan_user in sapaan:
+        return f"Halo {namauser}!!"
+
+    #if pesan_user in covidinfo:
+        #return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
+
+    if pesan_user in pamitan:
+        return f"Sampai jumpa {namauser}"
+    
     covid_info(message):
         texts = message.text
         provinsi = texts[7:]
@@ -26,25 +39,9 @@ def sample_responses(input_text, namauser):
         Meninggal= {}
         Dirawat = {}
         '''.format(prov, pos, sem, men, dirawat))
-    #=========================================
-
-    #======================================
-    #Eksekusi
-    if pesan_user in sapaan:
-        return f"Halo {namauser}!!"
-
-    #if pesan_user in covidinfo:
-        #return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
-
-    if pesan_user in pamitan:
-        return f"Sampai jumpa {namauser}"
-    
-    
-    
-    if pesan_user in covid_info:
-        if provinsi.upper() in prov.upper():
-            bot.reply_to(message, data)
-        else:
+    if provinsi.upper() in prov.upper():
+           .reply_to(message, data)
+    else:
             pass
 
     return "Aku tidak mengerti"
