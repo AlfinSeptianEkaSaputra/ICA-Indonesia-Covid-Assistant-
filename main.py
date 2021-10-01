@@ -10,7 +10,7 @@ def start_command(update, context):
 def help_command(update, context):
     update.message.reply_text('Butuh bantuan? maaf, bot belum dikembangkan sejauh itu')
 
-def google(update, context):
+def google(message):
    data = message.text.replace('/google', "")
    x = search(data, num_results=2)
    for i in x:
