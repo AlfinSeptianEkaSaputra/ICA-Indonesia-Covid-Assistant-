@@ -1,18 +1,8 @@
 import api as keys
 from telegram.ext import *
-from telebot import *
 import balasan as R
 
-bot = telebot.TeleBot(keys)
-
 #print("Bot Berjalan")
-@bot.message_handler(commands=['google'])
-def google(message):
-   data = message.text.replace('/google', "")
-   x = search(data, num_results=2)
-   for i in x:
-      bot.send_message(message.chat.id, i)
-
 def start_command(update, context):
     namauser = update.message.chat.first_name
     update.message.reply_text(f'''Halo {namauser}\n\nSaya adalah ICA(Indonesian Covid Asistant) !\nSaya bisa membantu anda mencari informasi tentang Covid 19.\n\nAnda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki''')
