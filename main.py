@@ -12,8 +12,8 @@ def help_command(update, context):
 
 def google(update, context):
       text = str(update.message.text).lower()
-      x = search(text, num_results=2)
-      update.message.reply_text(X)
+      hasilpencarian = search(text, num_results=2)
+      update.message.reply_text(hasilpencarian)
 
 def handle_message(update, context):
     text = str(update.message.text).lower()
