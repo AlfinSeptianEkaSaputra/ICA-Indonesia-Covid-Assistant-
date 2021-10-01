@@ -45,7 +45,7 @@ def covid(message):
         Meninggal= {}
         Dirawat = {}
         '''.format(prov, pos, sem, men, dirawat))
-              if pesan_user in covidinfo
+              if texts in covidinfo
                 return f"{message, data}"
                  
               else:
