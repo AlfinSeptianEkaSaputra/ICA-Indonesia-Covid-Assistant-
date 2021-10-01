@@ -1,10 +1,7 @@
 import requests
 import api
 
-bot
-def sample_responses(input_text, namauser):
-    pesan_user = str(input_text).lower()
-    
+
     #======================================
     #Kategori balasan
     perkenalan = ["apa kabar", "siapa kamu", "siapa namamu", "kamu siapa"]
@@ -13,7 +10,9 @@ def sample_responses(input_text, namauser):
     pamitan = ["sampai jumpa", "bye", "selamat tinggal"]
     #=========================================
 
-    #======================================
+def sample_responses(input_text, namauser):
+    pesan_user = str(input_text).lower()
+    
     #Eksekusi
     if pesan_user in sapaan:
         return f"Halo {namauser}!!"
@@ -28,7 +27,7 @@ def sample_responses(input_text, namauser):
         return f"Sampai jumpa {namauser}"
    
 def covid(message):
-    texts = pesan_user
+    texts = input_text
     provinsi = texts[7:]
     page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
     page_json = page.json()
@@ -47,8 +46,8 @@ def covid(message):
         Dirawat = {}
         '''.format(prov, pos, sem, men, dirawat))
               if pesan_user in covidinfo
-                return provinsi.upper() in prov.upper():
-                 bot.reply_to(message, data)
+                return f"{message, data}"
+                 
               else:
                  pass
 
