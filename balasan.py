@@ -26,9 +26,10 @@ def sample_responses(input_text, namauser):
     if pesan_user in pamitan:
         return f"Sampai jumpa {namauser}"
    
-def covid(message):
-    texts = input_text
-    provinsi = texts[7:]
+def covid(input_text, namauser):
+    pesan_user = str(input_text).lower()
+    
+    provinsi = pesan_user[7:]
     page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
     page_json = page.json()
     features = page_json['features']
