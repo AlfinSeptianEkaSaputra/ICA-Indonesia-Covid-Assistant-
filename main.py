@@ -1,7 +1,6 @@
 import api as keys
 from telegram.ext import *
 import balasan as R
-import fitur as F
 
 #print("Bot Berjalan")
 def start_command(update, context):
@@ -17,16 +16,6 @@ def handle_message(update, context):
     print(f"{namauser} : Mengirimkan pesan > {text} <")
 
     response = R.sample_responses(text, namauser)
-
-    update.message.reply_text(response)
-
-def handle_message(update, context):
-    text = str(update.message.text).lower()
-    namauser = update.message.chat.first_name
-
-    print(f"{namauser} : Mengirimkan pesan > {text} <")
-
-    response = F.google(text, namauser)
 
     update.message.reply_text(response)
 
