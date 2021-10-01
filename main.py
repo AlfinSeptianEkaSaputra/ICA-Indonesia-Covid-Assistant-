@@ -11,7 +11,7 @@ def google(message):
    data = message.text.replace('/google', "")
    x = search(data, num_results=2)
    for i in x:
-      keys.send_message(message.chat.id, i)
+      bot.send_message(message.chat.id, i)
 
 def start_command(update, context):
     namauser = update.message.chat.first_name
