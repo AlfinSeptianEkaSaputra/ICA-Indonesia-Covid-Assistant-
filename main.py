@@ -3,6 +3,8 @@ from telegram.ext import *
 from telebot import *
 import balasan as R
 
+bot = telebot.TeleBot(keys)
+
 #print("Bot Berjalan")
 @bot.message_handler(commands=['google'])
 def google(message):
