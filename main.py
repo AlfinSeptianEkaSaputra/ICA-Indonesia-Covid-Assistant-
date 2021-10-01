@@ -29,7 +29,7 @@ def main():
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start", start_command))
-    dp.add_handler(CommandHandler("help", help_command))
+    dp.add_handler(CommandHandler("info", help_command))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
