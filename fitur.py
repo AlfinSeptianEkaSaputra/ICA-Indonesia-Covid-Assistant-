@@ -2,9 +2,7 @@ from telebot import *
 import api
 
 bot = telebot.TeleBot(api.API_KEY)
-def sample_responses(input_text, namauser):
-    pesan_user = str(input_text).lower()
-    
+
 @bot.message_handler(commands=['google'])
 def google(message):
    data = message.text.replace('/google', "")
