@@ -16,24 +16,7 @@ def sample_responses(input_text, namauser):
     if pesan_user in sapaan:
         return f"Halo {namauser}!!"
     
-    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
-    page_json = page.json()
-    features = page_json['features']
-    for i in features:
-        prov = i['attributes']['Provinsi']
-        pos =  i['attributes']['Kasus_Posi']
-        sem = i['attributes']['Kasus_Semb']
-        men = i['attributes']['Kasus_Meni']
-        dirawat = int(pos)-int(sem)-int(men)
-        data = ('''
-        Provinsi = {}
-        Positif = {}
-        Sembuh = {}
-        Meninggal= {}
-        Dirawat = {}
-        '''.format(prov, pos, sem, men, dirawat))
-              if pesan_user in covidinfo:
-                return f"{data}"
+    
                  
     if pesan_user in perkenalan:
         return f"Saya adalah ICA, Indonesian Covid Assistant\n/nSaya akan membantu anda mencari informasi seputar Covid-19"
