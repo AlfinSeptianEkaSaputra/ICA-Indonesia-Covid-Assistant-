@@ -8,9 +8,11 @@ def sample_responses(input_text, namauser):
     covidinfo = ["covid", "info covid", "covid 19", "covid-19", "gejala covid"]
     pamitan = ["sampai jumpa", "bye", "selamat tinggal"]
     #=========================================
+    #Balasan
+    sapabalik = ["halo", "Ada yang bisa saya bantu?", "haii"]
     #Eksekusi
     if pesan_user in sapaan:
-        return f"Halo {namauser}!!"
+        return sapabalik
     
     if pesan_user in covidinfo:
         return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
