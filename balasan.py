@@ -2,6 +2,9 @@ import requests
 import json
 
 
+def sample_responses(input_text, namauser):
+    pesan_user = str(input_text).lower()
+    
     #======================================
     #Kategori balasan
     perkenalan = ["apa kabar", "siapa kamu", "siapa namamu", "kamu siapa"]
@@ -9,10 +12,6 @@ import json
     covidinfo = ["covid", "info covid", "covid 19", "covid-19", "gejala covid"]
     pamitan = ["sampai jumpa", "bye", "selamat tinggal"]
     #=========================================
-
-def sample_responses(input_text, namauser):
-    pesan_user = str(input_text).lower()
-    
     #Eksekusi
     if pesan_user in sapaan:
         return f"Halo {namauser}!!"
