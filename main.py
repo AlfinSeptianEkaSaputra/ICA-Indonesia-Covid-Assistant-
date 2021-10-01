@@ -13,7 +13,7 @@ def help_command(update, context):
 def google(update, context):
       text = str(update.message.text).lower()
       x = search(text, num_results=2)
-      update.message.reply_text(f'{x}')
+      update.message.reply_text(X)
 
 def handle_message(update, context):
     text = str(update.message.text).lower()
