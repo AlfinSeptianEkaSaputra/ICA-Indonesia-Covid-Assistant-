@@ -25,7 +25,7 @@ def handle_message(update, context):
 
     print(f"{namauser} : Mengirimkan pesan > {text} <")
 
-    response = R.covid(text, namauser)
+    response = R.covid_responses(text, namauser)
     update.message.reply_text(response)
     
 def error(update, context):
@@ -36,7 +36,7 @@ def main():
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start", start_command))
-    dp.add_handler(CommandHandler("info", help_command))
+    dp.add_handler(CommandHandler("help", help_command))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
