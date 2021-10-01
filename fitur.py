@@ -1,4 +1,5 @@
 from telebot import *
+from googlesearch import search
 import api
 
 bot = telebot.TeleBot(api.API_KEY)
