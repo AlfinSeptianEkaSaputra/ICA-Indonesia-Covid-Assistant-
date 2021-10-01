@@ -1,7 +1,3 @@
-import requests
-import json
-
-
 def sample_responses(input_text, namauser):
     pesan_user = str(input_text).lower()
     
