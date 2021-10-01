@@ -1,7 +1,7 @@
 from telebot import *
 import api
 
-bot = telebot.TeleBot(api.API_KEYS)
+bot = telebot.TeleBot(api.API_KEY)
 def sample_responses(input_text, namauser):
     pesan_user = str(input_text).lower()
     
