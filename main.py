@@ -10,6 +10,11 @@ def start_command(update, context):
 def help_command(update, context):
     update.message.reply_text('Butuh bantuan? maaf, bot belum dikembangkan sejauh itu')
 
+def google(update, context):
+      text = str(update.message.text).lower())
+      x = search(text, num_results=2)
+      update.message.reply_text(f'{x}')
+        
 def handle_message(update, context):
     text = str(update.message.text).lower()
     namauser = update.message.chat.first_name
