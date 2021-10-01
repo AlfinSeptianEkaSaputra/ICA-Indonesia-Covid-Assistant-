@@ -1,8 +1,15 @@
 import api as keys
 from telegram.ext import *
+from telebot import *
 import balasan as R
 
 #print("Bot Berjalan")
+@bot.message_handler(commands=['google'])
+def google(message):
+   data = message.text.replace('/google', "")
+   x = search(data, num_results=2)
+   for i in x:
+      keys.send_message(message.chat.id, i)
 
 def start_command(update, context):
     namauser = update.message.chat.first_name
