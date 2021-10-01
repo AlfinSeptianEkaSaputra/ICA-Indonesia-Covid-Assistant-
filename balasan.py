@@ -16,8 +16,7 @@ def sample_responses(input_text, namauser):
         return f"Halo {namauser}!!"
     
     if pesan_user in perkenalan:
-        return f"Saya adalah ICA, Indonesian Covid Assistant, Saya akan membantu anda mencari informasi seputar Covid-19"
-
+        return f"Saya adalah ICA, Indonesian Covid Assistant\n\nSaya akan membantu anda mencari informasi seputar Covid-19"
 
     if pesan_user in covidinfo:
         return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
