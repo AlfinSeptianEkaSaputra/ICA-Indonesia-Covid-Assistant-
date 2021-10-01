@@ -1,7 +1,6 @@
 import api as keys
 from telegram.ext import *
 import balasan as R
-import fitur as F
 
 #print("Bot Berjalan")
 def start_command(update, context):
