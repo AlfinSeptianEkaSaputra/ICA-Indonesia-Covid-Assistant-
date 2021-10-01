@@ -1,6 +1,7 @@
 import api as keys
 from telegram.ext import *
 import balasan as R
+from googlesearch import search
 
 #print("Bot Berjalan")
 def start_command(update, context):
@@ -8,6 +9,12 @@ def start_command(update, context):
     update.message.reply_text(f'''Halo {namauser}\n\nSaya adalah ICA(Indonesian Covid Asistant) !\nSaya bisa membantu anda mencari informasi tentang Covid 19.\n\nAnda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki''')
 def help_command(update, context):
     update.message.reply_text('Butuh bantuan? maaf, bot belum dikembangkan sejauh itu')
+
+def google(update, context):
+   data = message.text.replace('/google', "")
+   x = search(data, num_results=2)
+   for i in x:
+      update.message(message.chat.id, i)
 
 def handle_message(update, context):
     text = str(update.message.text).lower()
@@ -28,6 +35,7 @@ def main():
 
     dp.add_handler(CommandHandler("start", start_command))
     dp.add_handler(CommandHandler("help", help_command))
+    dp.add_handler(CommandHandler("google", google))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
