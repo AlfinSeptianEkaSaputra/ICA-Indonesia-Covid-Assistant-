@@ -14,7 +14,7 @@ def google(message):
    data = message.text.replace('/google', "")
    x = search(data, num_results=2)
    for i in x:
-      update.message(message.chat.id, i)
+      update.message(i)
 
 def handle_message(update, context):
     text = str(update.message.text).lower()
