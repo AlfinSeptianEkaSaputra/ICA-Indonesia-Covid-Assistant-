@@ -26,7 +26,7 @@ def handle_message(update, context):
 
     print(f"{namauser} : Mengirimkan pesan > {text} <")
 
-    response = F.sample_responses(text, namauser)
+    response = F.google(text, namauser)
 
     update.message.reply_text(response)
 
