@@ -12,7 +12,7 @@ def sample_responses(input_text, namauser):
     sapabalik = ["halo", "Ada yang bisa saya bantu?", "haii"]
     #Eksekusi
     if pesan_user in sapaan:
-        return sapabalik
+        return f"Halo {namauser}"
     
     if pesan_user in covidinfo:
         return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
