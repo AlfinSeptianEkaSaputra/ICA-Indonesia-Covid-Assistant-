@@ -4,16 +4,14 @@ import api
 
 bot = telebot.TeleBot(api.API_KEY)
 
-def fitur(message):
-   
-   @bot.message_handler(commands=['google'])
+@bot.message_handler(commands=['google'])
    def google(message):
       data = message.text.replace('/google', "")
       x = search(data, num_results=2)
       for i in x:
          bot.send_message(message.chat.id, i)
 
-   @bot.message_handler(commands=['covid'])
+@bot.message_handler(commands=['covid'])
    def covid(message):
       texts = message.text
       provinsi = texts[7:]
@@ -38,7 +36,7 @@ def fitur(message):
          else:
             pass
 
-   @bot.message_handler(commands=['rumahsakit'])
+@bot.message_handler(commands=['rumahsakit'])
    def faskes(message):
       texts = message.text
       wilayah = texts[12:]
