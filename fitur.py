@@ -15,7 +15,8 @@ def google(update, context):
    update.message.reply_text(hasilpencarian)
 
 def covid(update, context):
-   provinsi = update[7:]
+   texts = message.text
+   provinsi = texts[7:]
    page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/COVID19_Indonesia_per_Provinsi/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=json')
    page_json = page.json()
    features = page_json['features']
