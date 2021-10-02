@@ -3,7 +3,6 @@ import api as keys
 from telegram.ext import *
 import balasan as R
 import fitur as F
-from googlesearch import search
 
 print("Bot Berjalan")
 
