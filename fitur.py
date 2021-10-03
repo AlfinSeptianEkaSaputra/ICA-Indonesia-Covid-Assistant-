@@ -49,3 +49,19 @@ Dirawat = {}
 '''.format(prov, pos, sem, men, dirawat))
 
       update.message.reply_text(data)
+
+def indonesiaCovid(update: Update, context: CallbackContext):
+    API_INDO = os.environ['API_INDO']
+    response = rq.get(API_INDO)
+    jsonParse = response.json()
+    positif = str(jsonParse[0]['positif'])
+    sembuh = str(jsonParse[0]['sembuh'])
+    meninggal = str(jsonParse[0]['meninggal'])
+    dateNow = datetime.datetime.now()
+    context.bot.send_message(update.message.chat_id,f"""
+    Total Kumulatif Covid-19 di Indonesia
+    Positif = {positif} Orang
+    Sembuh = {sembuh} Orang
+    Meninggal = {meninggal} Orang
+    Update = {dateNow}
+    """)
