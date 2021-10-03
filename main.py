@@ -1,4 +1,3 @@
-import api
 import api as keys
 from telegram.ext import *
 import balasan as R
