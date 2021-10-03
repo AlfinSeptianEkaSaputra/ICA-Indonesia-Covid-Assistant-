@@ -85,8 +85,7 @@ def state_wise(update, context):
                 [InlineKeyboardButton('Maluku Utara', callback_data='Maluku Utara'),
                  InlineKeyboardButton('Papua', callback_data='Papua')],
 
-                [InlineKeyboardButton('Papua Barat', callback_data='Papua Barat'),
-                 InlineKeyboardButton('Indonesia', callback_data='Indonesia')]]
+                [InlineKeyboardButton('Papua Barat', callback_data='Papua Barat')]]
 
 
     reply_markup = InlineKeyboardMarkup(keyboard)
