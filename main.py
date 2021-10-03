@@ -1,5 +1,5 @@
-import api as keys
 from telegram.ext import *
+import api as keys
 import balasan as R
 import fitur as F
 
@@ -15,8 +15,10 @@ def handle_message(update, context):
 
     update.message.reply_text(response)
 
+
 def error(update, context):
     print(f"update {update} menyebabkan error {context.error}")
+
 
 def main():
     updater = Updater(keys.API_KEY, use_context=True)
@@ -25,14 +27,15 @@ def main():
     dp.add_handler(CommandHandler("start", F.start_command))
     dp.add_handler(CommandHandler("help", F.help_command))
     dp.add_handler(CommandHandler("google", F.google))
-    dp.add_handler(CommandHandler("covid", F.covid))
-    dp.add_handler(CommandHandler("Indonesia", F.indonesiaCovid))
-    
+    dp.add_handler(CommandHandler("covidprovinsi", F.state_wise))
+    dp.add_handler(CallbackQueryHandler(F.tombol_))
+
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
     dp.add_error_handler(error)
 
     updater.start_polling()
     updater.idle()
+
 
 main()
