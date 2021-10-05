@@ -19,7 +19,7 @@ def sample_responses(input_text, namauser):
         return sapakembali
     
     if pesan_user in covidinfo:
-        return f"{namauser} mau info covid? \n\nTunggu tim riset yaa... :3"
+        return f"{namauser} mau info covid? Silahkan tekan /covid untuk info seputar update kasus Covid-19"
                  
     if pesan_user in perkenalan:
         return f"Saya adalah ICA, Indonesian Covid Assistant\nSaya akan membantu anda mencari informasi seputar Covid-19"
