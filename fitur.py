@@ -2,6 +2,7 @@ from googlesearch import search
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 import requests
 
+#===============#DATA================      
 my_states = ['Aceh', 'Sumatera Utara', 'Sumatera Barat', 'Riau', 'Jambi', 'Sumatera Selatan', 'Bengkulu', 'Bangka Belitung', 'Lampung', 'Kepulauan Riau', 'DKI Jakarta', 'Jawa Barat', 'Jawa Tengah', 'Daerah Istimewa Yogyakarta', 'Jawa Timur', 'Banten', 'Bali',
              'Nusa Tenggara Barat', 'Nusa Tenggara Timur', 'Kalimantan Barat', 'Kalimantan Tengah', 'Kalimantan Selatan', 'Kalimantan Timur', 'Kalimantan Utara', 'Sulawesi Utara', 'Sulawesi Tengah', 'Sulawesi Selatan', 'Sulawesi Tenggara', 'Gorontalo', 'Sulawesi Barat', 'Maluku', 'Maluku Utara', 'Papua', 'Papua Barat']
 
@@ -10,6 +11,7 @@ res = requests.get(link1).json()
 
 regional_data = res['features']
 total_states = int(len(regional_data))
+#=====================================
 
 def start_command(update, context):
     namauser = update.message.chat.first_name
@@ -22,9 +24,9 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
-                              "/covid => Kasus per Provinsi COVID-19 Indonesia\n"
-                              "/berita => Menampilkan berita covid19\n"
-                              "/rumahsakit => Rumah Sakit Rujukan Penanganan COVID-19\n"
+                              "/covid => Kasus Per Provinsi COVID-19 di Indonesia\n"
+                              "/berita (ketik berita yang di inginkan) => Menampilkan Berita Seputar Covid19\n"
+                              "/rumahsakit (ketik wilayah atau alamat)=> Rumah Sakit Rujukan Nasional\n"
                               ">>fitur<<\n"
                               ">>fitur<<\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
@@ -127,12 +129,14 @@ Telepon = {}
 '''.format(nam, koders, wlyh, almt, tlpn))
       if pesan.upper() in wlyh.upper():
          update.message.reply_text(data)
+
       elif pesan.upper() in almt.upper():
          update.message.reply_text(data)
-      else:
-        pass
 
+      else:
+         pass
 def google(update, context):
-    text = str(update.message.text).lower()
-    hasilpencarian = search(text, num_results=1)
-    update.message.reply_text(hasilpencarian)
+    data = update.message.text
+    x = search(data, num_results=2)
+    for i in x:
+        update.message.reply_text(i)
