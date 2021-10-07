@@ -26,7 +26,7 @@ def help_command(update, context):
                               "Info Covid\n"
                               "/covid => Kasus Per Provinsi COVID-19 di Indonesia\n"
                               "/berita (ketik berita yang di inginkan) => Menampilkan Berita Seputar Covid19\n"
-                              "/rumahsakit (ketik wilayah atau alamat)=> Rumah Sakit Rujukan Nasional\n"
+                              "/rumahsakit (ketik wilayah atau alamat) => Rumah Sakit Rujukan Nasional\n"
                               ">>fitur<<\n"
                               ">>fitur<<\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
