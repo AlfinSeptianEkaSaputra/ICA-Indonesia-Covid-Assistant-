@@ -129,8 +129,8 @@ Telepon = {}
          update.message.reply_text(data)
       elif pesan.upper() in almt.upper():
          update.message.reply_text(data)
-      else update.message.reply_text("Ada lagi yang ingin kamu tanyakan? Kalau ada, ketik (/help) untuk kembali ke menu utama, atau ketik *SELESAI* bila mau mengakhiri perbincangan kita hari ini.")
-     
+      else:
+        pass
 
 def google(update, context):
     text = str(update.message.text).lower()
