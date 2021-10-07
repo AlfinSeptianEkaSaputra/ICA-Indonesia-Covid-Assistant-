@@ -26,7 +26,7 @@ def main():
 
     dp.add_handler(CommandHandler("start", F.start_command))
     dp.add_handler(CommandHandler("help", F.help_command))
-    dp.add_handler(CommandHandler("google", F.google))
+    dp.add_handler(CommandHandler("berita", F.google))
     dp.add_handler(CommandHandler("rumahsakit", F.rumkit))
     dp.add_handler(CommandHandler("covid", F.state_wise))
     dp.add_handler(CallbackQueryHandler(F.tombol_))
