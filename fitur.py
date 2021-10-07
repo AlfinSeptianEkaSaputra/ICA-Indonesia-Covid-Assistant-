@@ -22,7 +22,7 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
-                              "/covid => Jumlah kasus covid19 di berbagai provinsi yang ada di Indonesia\n"
+                              "/covid => Kasus per Provinsi COVID-19 Indonesia\n"
                               "/berita => Menampilkan berita covid19\n"
                               "/rumahsakit => Rumah sakit rujukan Nasional\n"
                               ">>fitur<<\n"
