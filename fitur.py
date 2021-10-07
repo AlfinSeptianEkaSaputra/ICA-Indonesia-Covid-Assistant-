@@ -120,7 +120,7 @@ def rumkit(update, context):
       tlpn = i['attributes']['telepon']
       data = ('''
 Nama Rumah Sakit = {}
-Kode Rumah Sapkit = {}
+Kode Rumah Sakit = {}
 Wilayah = {}
 Alamat= {}
 Telepon = {}
