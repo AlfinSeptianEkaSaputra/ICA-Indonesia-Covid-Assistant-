@@ -110,31 +110,32 @@ Kasus Meninggal :  *{regional_data[index]['attributes']['Kasus_Meni']:,}*"
 
 def rumkit(update, context):
    texts = update.message.text
-   pesan = texts[12:]
-   page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,alamat,wilayah,kode_rs,telepon&outSR=4326&f=json')
-   page_json = page.json()
-   features = page_json['features']
-   for i in features:
-      nam = i['attributes']['nama']
-      koders =  i['attributes']['kode_rs']
-      wlyh = i['attributes']['wilayah']
-      almt = i['attributes']['alamat']
-      tlpn = i['attributes']['telepon']
-      data = ('''
-Nama Rumah Sakit = {}
-Kode Rumah Sakit = {}
-Wilayah = {}
-Alamat= {}
-Telepon = {}
-'''.format(nam, koders, wlyh, almt, tlpn))
-      if pesan.upper() in wlyh.upper():
-         update.message.reply_text(data)
+   if (texts == "/rumahsakit"):
+       update.message.reply_text("Tolong tambahkan wilayah rumah sakit di daerah yang anda cari\n\n/rumahsakit <Nama daerah atau alamat>")
+   else:daerah ataua
+       pesan = texts[12:]
+       page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,alamat,wilayah,kode_rs,telepon&outSR=4326&f=json')
+       page_json = page.json()
+       features = page_json['features']
+       for i in features:
+          nam = i['attributes']['nama']
+          koders =  i['attributes']['kode_rs']
+          wlyh = i['attributes']['wilayah']
+          almt = i['attributes']['alamat']
+          tlpn = i['attributes']['telepon']
+          data = (
+          "Nama Rumah Sakit = {}\n"
+          "Kode Rumah Sakit = {}\n"
+          "Wilayah = {}\n"
+          "Alamat= {}\n"
+          "Telepon = {}\n".format(nam, koders, wlyh, almt, tlpn))
+          if pesan.upper() in wlyh.upper():
+              update.message.reply_text(data)
+          elif pesan.upper() in almt.upper():
+              update.message.reply_text(data)
+          else:
+              pass
 
-      elif pesan.upper() in almt.upper():
-         update.message.reply_text(data)
-
-      else:
-         pass
 def google(update, context):
     data = update.message.text
     x = search(data, num_results=2)
