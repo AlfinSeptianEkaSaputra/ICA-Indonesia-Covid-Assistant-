@@ -24,9 +24,9 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
-                              "/covid => Kasus Per Provinsi COVID-19 di Indonesia\n"
-                              "/berita (ketik berita yang di inginkan) => Menampilkan Berita Seputar Covid19\n"
-                              "/rumahsakit (ketik wilayah atau alamat) => Rumah Sakit Rujukan Nasional\n"
+                              "/covid => Kasus Per Provinsi COVID-19 di Indonesia 🦠\n"
+                              "/berita => Menampilkan Berita Seputar Covid19 📺\n"
+                              "/rumahsakit => Rumah Sakit Rujukan Nasional 🏥\n"
                               ">>fitur<<\n"
                               ">>fitur<<\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
@@ -93,6 +93,7 @@ def state_wise(update, context):
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text(
         "_Pilih salah satu provinsi di bawah ini : _\n", reply_markup=reply_markup, parse_mode="MarkdownV2")
+    update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
 
 def tombol_(update, context):
     query = update.callback_query
@@ -108,10 +109,11 @@ Kasus Meninggal :  *{regional_data[index]['attributes']['Kasus_Meni']:,}*"
         last_data = f"{state_wise_data}"
         query.edit_message_text(last_data, parse_mode="Markdown")
 
+
 def rumkit(update, context):
    texts = update.message.text
    if (texts == "/rumahsakit"):
-       update.message.reply_text("Tolong tambahkan wilayah rumah sakit di daerah yang anda cari\n\n/rumahsakit <Nama daerah atau alamat>")
+       update.message.reply_text("Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari.\n\n/rumahsakit *wilayah atau alamat rumah sakit*.\nMisalkan /rumahsakit Kediri.\nAtaupun /rumahsakit  JL. VETERAN...")
    else:
        pesan = texts[12:]
        page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,alamat,wilayah,kode_rs,telepon&outSR=4326&f=json')
@@ -124,20 +126,28 @@ def rumkit(update, context):
           almt = i['attributes']['alamat']
           tlpn = i['attributes']['telepon']
           data = (
-          "Nama Rumah Sakit = {}\n"
-          "Kode Rumah Sakit = {}\n"
-          "Wilayah = {}\n"
-          "Alamat= {}\n"
-          "Telepon = {}\n".format(nam, koders, wlyh, almt, tlpn))
+          "_Berikut ini rumah sakit yang anda cari : _\n"
+          "Nama Rumah Sakit : *{}*\n"
+          "Kode Rumah Sakit : *{}*\n"
+          "Wilayah : *{}*\n"
+          "Alamat : *{}*\n"
+          "Telepon : *{}*\n".format(nam, koders, wlyh, almt, tlpn))
           if pesan.upper() in wlyh.upper():
-              update.message.reply_text(data)
+              update.message.reply_text(data, parse_mode="Markdown")
           elif pesan.upper() in almt.upper():
-              update.message.reply_text(data)
+              update.message.reply_text(data, parse_mode="Markdown")
           else:
               pass
+   update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
 
 def google(update, context):
-    data = update.message.text
-    x = search(data, num_results=2)
-    for i in x:
+   data = update.message.text
+
+   if (data == "/berita"):
+       update.message.reply_text("Cari berita dengan mengetikkan: \n/berita *ketik informsi apa yang ingin anda cari*.\nMisalkan /berita situasi indonesia saat ini.")
+   else:
+      x = search(data, num_results=2)
+      for i in x:
         update.message.reply_text(i)
+
+   update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
