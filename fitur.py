@@ -24,10 +24,10 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
+                              "/indonesia => Kasus covid-19 di Indonesia 🇮🇩\n"
                               "/covid => Kasus Per Provinsi COVID-19 di Indonesia 🦠\n"
                               "/berita => Menampilkan Berita Seputar Covid19 📺\n"
                               "/rumahsakit => Rumah Sakit Rujukan Nasional 🏥\n"
-                              ">>fitur<<\n"
                               ">>fitur<<\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
                               "Kami juga.... >>tambahkan<<\n"
@@ -92,8 +92,8 @@ def state_wise(update, context):
 
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text(
-        "_Pilih salah satu provinsi di bawah ini : _\n", reply_markup=reply_markup, parse_mode="MarkdownV2")
-    update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
+        "_Pilih salah satu provinsi di bawah ini : _\n", reply_markup=reply_markup, parse_mode="Markdown")
+    update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
 
 def tombol_(update, context):
     query = update.callback_query
@@ -138,7 +138,7 @@ def rumkit(update, context):
               update.message.reply_text(data, parse_mode="Markdown")
           else:
               pass
-   update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
+   update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
 
 def google(update, context):
    data = update.message.text
@@ -150,4 +150,26 @@ def google(update, context):
       for i in x:
         update.message.reply_text(i)
 
-   update.message.reply_text("Ketik /help untuk kembali ke menu fitur.")
+   update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
+
+def indonesia(update, context):
+    api = requests.get('https://api.kawalcorona.com/indonesia/')
+    api_json = api.json()
+    api_content = api_json
+    for wan in api_content:
+         negara = wan['name']
+         positif = wan['positif']
+         sembuh = wan['sembuh']
+         meninggal = wan['meninggal']
+         dirawat = wan['dirawat']
+         kirim = ('''
+_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n
+Negara = *{}*
+Positif = *{}*
+Sembuh = *{}*
+Meninggal = *{}*
+Dirawat = *{}*
+'''.format(negara,positif,sembuh,meninggal,dirawat))
+         update.message.reply_text(kirim, parse_mode="Markdown")
+
+    update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
