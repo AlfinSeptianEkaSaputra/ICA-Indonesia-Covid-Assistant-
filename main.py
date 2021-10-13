@@ -29,6 +29,7 @@ def main():
     dp.add_handler(CommandHandler("berita", F.google))
     dp.add_handler(CommandHandler("rumahsakit", F.rumkit))
     dp.add_handler(CommandHandler("covid", F.state_wise))
+    dp.add_handler(CommandHandler("indonesia", F.indonesia))
     dp.add_handler(CallbackQueryHandler(F.tombol_))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
