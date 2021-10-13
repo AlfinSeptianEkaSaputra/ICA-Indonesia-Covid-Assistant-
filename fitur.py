@@ -162,14 +162,14 @@ def indonesia(update, context):
          sembuh = wan['sembuh']
          meninggal = wan['meninggal']
          dirawat = wan['dirawat']
-         kirim = ('''
-_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n
-Negara = *{}*
-Positif = *{}*
-Sembuh = *{}*
-Meninggal = *{}*
-Dirawat = *{}*
-'''.format(negara,positif,sembuh,meninggal,dirawat))
+         kirim = (
+"_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n"
+"Negara = *{}*\n"
+"Positif = *{}*\n"
+"Sembuh = *{}*\n"
+"Meninggal = *{}*\n"
+"Dirawat = *{}*\n"
+.format(negara,positif,sembuh,meninggal,dirawat))
          update.message.reply_text(kirim, parse_mode="Markdown")
 
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
