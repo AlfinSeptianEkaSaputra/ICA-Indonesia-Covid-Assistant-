@@ -113,7 +113,7 @@ Kasus Meninggal :  *{regional_data[index]['attributes']['Kasus_Meni']:,}*"
 def rumkit(update, context):
    texts = update.message.text
    if (texts == "/rumahsakit"):
-       update.message.reply_text("Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari.\n\n/rumahsakit *wilayah atau alamat rumah sakit*.\nMisalkan /rumahsakit Kediri.\nAtaupun /rumahsakit  JL. VETERAN...")
+       update.message.reply_text("Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari 🏥.\n\n/rumahsakit *wilayah atau alamat rumah sakit*.\nMisalkan /rumahsakit Kediri.\nAtaupun /rumahsakit  JL. VETERAN...")
    else:
        pesan = texts[12:]
        page = requests.get('https://services5.arcgis.com/VS6HdKS0VfIhv8Ct/arcgis/rest/services/RS_Rujukan_Update_May_2020/FeatureServer/0/query?where=1%3D1&outFields=nama,alamat,wilayah,kode_rs,telepon&outSR=4326&f=json')
