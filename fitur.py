@@ -41,7 +41,7 @@ def help_command(update, context):
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
                               "/indonesia => Kasus covid-19 di Indonesia 🇮🇩\n"
-                              "/covid => Kasus Per Provinsi COVID-19 di Indonesia 🦠\n"
+                              "/covidprov => Kasus Per Provinsi COVID-19 di Indonesia 🦠\n"
                               "/berita => Menampilkan Berita Seputar Covid19 📺\n"
                               "/rumahsakit => Rumah Sakit Rujukan Nasional 🏥\n"
                               ">>fitur<<\n\n"
