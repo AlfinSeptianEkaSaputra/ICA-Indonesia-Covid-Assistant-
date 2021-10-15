@@ -30,5 +30,5 @@ def sample_responses(input_text, namauser):
 
    
 
-    return "Jika anda kebingungan ketik /help untuk menampilkan *menu fitur*", parse_mode="Markdown"
+    return "Jika anda kebingungan ketik /help untuk menampilkan menu fitur"
     #==========================================
