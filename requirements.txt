@@ -1,5 +1,5 @@
 requests~=2.25.1
 googlesearch-python
 python-telegram-bot
-pyTelegramBotAPI
+DateTime
 numpy
