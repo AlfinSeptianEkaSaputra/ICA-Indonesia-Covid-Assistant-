@@ -30,5 +30,5 @@ def sample_responses(input_text, namauser):
 
    
 
-    return "Aku tidak mengerti"
+    return "Jika anda kebingungan ketik /help untuk menampilkan *menu fitur*"
     #==========================================
