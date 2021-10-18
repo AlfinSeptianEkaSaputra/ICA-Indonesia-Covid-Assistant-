@@ -21,7 +21,7 @@ def realtime(update, perintah):
     namauser1 = update.message.chat.first_name
     namauser2 = update.message.chat.last_name
     data = (f"{tanggal}:{namauser1} {namauser2} => Mengirimkan pesan >{text}<\n")
-    log_bot = open('data_pesan_user.txt', 'a')
+    log_bot = open('data_pesan_user.html', 'a')
     log_bot.write(data)
     log_bot.close()
 
