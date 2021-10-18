@@ -14,19 +14,7 @@ regional_data = res['features']
 total_states = int(len(regional_data))
 #=====================================
 
-def realtime(update, perintah):
-    text = str(update.message.text).lower()
-    waktu = datetime.datetime.now()
-    tanggal = waktu.strftime('%D')
-    namauser1 = update.message.chat.first_name
-    namauser2 = update.message.chat.last_name
-    data = (f"{tanggal}:{namauser1} {namauser2} => Mengirimkan pesan >{text}<\n")
-    log_bot = open('data_pesan_user.html', 'a')
-    log_bot.write(data)
-    log_bot.close()
-
 def start_command(update, context):
-    realtime(update, 'start')
     
     namauser = update.message.chat.first_name
     update.message.reply_text(
@@ -35,8 +23,7 @@ def start_command(update, context):
         "Anda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki")
 
 def help_command(update, context):
-    realtime(update, 'help')
-    
+
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
@@ -53,7 +40,6 @@ def help_command(update, context):
                               "Atau hanya anda ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)")
 
 def state_wise(update, context):
-    realtime(update, 'covidprov')
     
     keyboard = [[InlineKeyboardButton("Aceh", callback_data='Aceh'),
                  InlineKeyboardButton("Sumatera Utara", callback_data='Sumatera Utara')],
@@ -129,8 +115,7 @@ Kasus Meninggal :  *{regional_data[index]['attributes']['Kasus_Meni']:,}*"
 
 
 def rumkit(update, context):
-   realtime(update, 'rumahsakit')
-    
+  
    texts = update.message.text
    if (texts == "/rumahsakit"):
        update.message.reply_text("Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari.\n\n/rumahsakit *wilayah atau alamat rumah sakit*.\nMisalkan /rumahsakit Kediri.\nAtaupun /rumahsakit  JL. VETERAN...")
@@ -161,8 +146,7 @@ def rumkit(update, context):
    update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
 
 def google(update, context):
-   realtime(update, 'berita')
-    
+
    data = update.message.text
 
    if (data == "/berita"):
@@ -175,8 +159,7 @@ def google(update, context):
    update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.",parse_mode="MARKDOWN")
 
 def indonesia(update, context):
-    realtime(update, 'indonesia')
-    
+
     waktu = datetime.datetime.now()
     tanggal = waktu.strftime('%D')
     api = requests.get('https://api.kawalcorona.com/indonesia/')
