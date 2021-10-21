@@ -18,10 +18,6 @@ res = requests.get(link1).json()
 
 regional_data = res['features']
 total_states = int(len(regional_data))
-
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                  'Chrome/58.0.3029.110 Safari/537.3'}
 # =====================================
 
 def start_command(update, context):
