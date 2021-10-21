@@ -174,6 +174,7 @@ def indonesia(update, context):
     date = waktu.strftime('%x')
     day = waktu.strftime('%A')
     time = waktu.strftime('%X')
+    
     api = requests.get('https://api.kawalcorona.com/indonesia/')
     api_json = api.json()
     api_content = api_json
