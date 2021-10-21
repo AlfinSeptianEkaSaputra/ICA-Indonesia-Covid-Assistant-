@@ -18,6 +18,8 @@ res = requests.get(link1).json()
 
 regional_data = res['features']
 total_states = int(len(regional_data))
+
+
 # =====================================
 
 def start_command(update, context):
@@ -38,7 +40,8 @@ def help_command(update, context):
                               "/rumahsakit => _Rumah Sakit Rujukan Nasional_ 🏥\n"
                               "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_ ☁️\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda"
-                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)", parse_mode="MARKDOWN")
+                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)",
+                              parse_mode="MARKDOWN")
 
 
 def state_wise(update, context):
@@ -119,7 +122,8 @@ def rumkit(update, context):
     texts = update.message.text
     if (texts == "/rumahsakit"):
         update.message.reply_text(
-            "Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari.🏥🏥\nMisalkan _/rumahsakit Kediri_.\nAtaupun _/rumahsakit  JL. VETERAN..._", parse_mode="Markdown")
+            "Tolong tambahkan wilayah atau alamat rumah sakit di daerah yang anda cari.🏥🏥\nMisalkan _/rumahsakit Kediri_.\nAtaupun _/rumahsakit  JL. VETERAN..._",
+            parse_mode="Markdown")
     else:
         pesan = texts[12:]
         page = requests.get(
@@ -153,7 +157,8 @@ def google(update, context):
 
     if (data == "/berita"):
         update.message.reply_text(
-            "Cari berita dengan mengetikkan: \n_/berita_ *ketik informsi apa yang ingin anda cari*.\nMisalkan _/berita_ situasi indonesia saat ini.", parse_mode="Markdown")
+            "Cari berita dengan mengetikkan: \n_/berita_ *ketik informsi apa yang ingin anda cari*.\nMisalkan _/berita_ situasi indonesia saat ini.",
+            parse_mode="Markdown")
     else:
         x = search(data, num_results=2)
         for i in x:
@@ -161,11 +166,12 @@ def google(update, context):
 
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.", parse_mode="MARKDOWN")
 
+
 def indonesia(update, context):
     waktu = datetime.datetime.now()
     date = waktu.strftime('%x')
     day = waktu.strftime('%A')
-    
+
     api = requests.get('https://api.kawalcorona.com/indonesia/')
     api_json = api.json()
     api_content = api_json
@@ -186,23 +192,24 @@ def indonesia(update, context):
             '*Update*:\n'
             '_Date: {}_\n'
             '_Day: {}_\n'
-                .format(negara, positif, sembuh, meninggal, dirawat, date, day, time))
+                .format(negara, positif, sembuh, meninggal, dirawat, date, day))
         update.message.reply_text(kirim, parse_mode="Markdown")
     update.message.reply_text(
         "Mari kita terus bersama-sama menangani pandemi ini, bergotong royong, bersatu padu karena hanya dengan cara kebersamaan ini kita akan dapat mengatasinya. Kita tidak sendiri, kita bersama dengan negara-negara lain yang juga mengalami hal yang sama untuk bersama mengatasi pandemi ini. Dan tetaplah bersabar, optimis, tetap disiplin berada di rumah, jaga jarak dalam berhubungan/berinteraksi dengan orang lain, hindari kerumunan, rajin cuci tangan, pakailah masker saat keluar rumah. Ketika kedisiplinan kuat itu kita lakukan, insyaallah kita akan kembali pada situasi dan kondisi normal dan dapat bertemu dengan saudara, bertemu dengan teman, bertemu dengan kerabat dan tetangga dalam situasi yang normal. Tapi untuk saat ini marilah kita tetap berada di rumah saja.\n\n"
         "Pesan Sumber: https://kemlu.go.id/portal/id/read/1608/pidato/pesan-kepada-masyarakat-indonesia-terkait-covid-19-10-april-2020")
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.", parse_mode="MARKDOWN")
 
-def cuaca(update, context):
 
+def cuaca(update, context):
     input = update.message.text
     waktu = datetime.datetime.now()
     date = waktu.strftime('%x')
     day = waktu.strftime('%A')
-    
+
     if (input == "/cuaca"):
         update.message.reply_text(
-            "Tolong tambahkan nama provinsi/kota/daerah. 🏙️🏙️\nMisalkan _/cuaca kediri_.\nAtaupun _/cuaca jawa timur_.\nAtaupun _/cuaca Indonesia_.", parse_mode="Markdown")
+            "Tolong tambahkan nama provinsi/kota/daerah. 🏙️🏙️\nMisalkan _/cuaca kediri_.\nAtaupun _/cuaca jawa timur_.\nAtaupun _/cuaca Indonesia_.",
+            parse_mode="Markdown")
     else:
         api_url = 'https://api.openweathermap.org/data/2.5/weather?'
         pesan = input[7:]
@@ -238,11 +245,9 @@ def cuaca(update, context):
                    '*Update*:\n'
                    '_Date: {}_\n'
                    '_Day: {}_\n'
-                   .format(kota, kota, long, lat, temp, max_temp, min_temp, wind_speed, pressure, humidity, date, day, time))
+                   .format(kota, kota, long, lat, temp, max_temp, min_temp, wind_speed, pressure, humidity, date, day))
             update.message.reply_text(msg, parse_mode="Markdown")
         else:
             pass
 
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.", parse_mode="MARKDOWN")
-
-
