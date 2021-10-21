@@ -36,17 +36,13 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
-                              "/indonesia => Kasus covid-19 di Indonesia 🇮🇩\n"
-                              "/covidprov => Kasus COVID Per Provinsi di Indonesia 🦠\n"
-                              "/berita => Berita Seputar Covid19 📺\n"
-                              "/rumahsakit => Rumah Sakit Rujukan Nasional 🏥\n"
-                              ">>fitur<<\n\n"
-                              "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
-                              "Kami juga.... >>tambahkan<<\n"
-                              ">>fitur<<\n"
-                              ">>fitur<<\n"
-                              ">>fitur<<\n\n"
-                              "Atau hanya anda ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)")
+                              "/indonesia => _Kasus covid-19 di Indonesia_ 🇮🇩\n"
+                              "/covidprov => _Kasus COVID Per Provinsi di Indonesia_ 🦠\n"
+                              "/berita => _Berita Seputar Covid19_ 📺\n"
+                              "/rumahsakit => _Rumah Sakit Rujukan Nasional_ 🏥\n"
+                              "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_\n\n"
+                              "Anda bisa juga konsultasi gejala covid, saya akan membantu anda"
+                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)"parse_mode="MARKDOWN")
 
 
 def state_wise(update, context):
