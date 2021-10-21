@@ -42,7 +42,7 @@ def help_command(update, context):
                               "/rumahsakit => _Rumah Sakit Rujukan Nasional_ 🏥\n"
                               "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda"
-                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)"parse_mode="MARKDOWN")
+                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)", parse_mode="MARKDOWN")
 
 
 def state_wise(update, context):
