@@ -40,13 +40,9 @@ def help_command(update, context):
                               "/covidprov => Kasus COVID Per Provinsi di Indonesia 🦠\n"
                               "/berita => Berita Seputar Covid19 📺\n"
                               "/rumahsakit => Rumah Sakit Rujukan Nasional 🏥\n"
-                              ">>fitur<<\n\n"
-                              "Anda bisa juga konsultasi gejala covid, saya akan membantu anda\n\n"
-                              "Kami juga.... >>tambahkan<<\n"
-                              ">>fitur<<\n"
-                              ">>fitur<<\n"
-                              ">>fitur<<\n\n"
-                              "Atau hanya anda ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)")
+                              "/cuaca => Memprediksi cuaca di Indonesia maupun di duniaweat ☁️🌡️\n\n"
+                              "Anda bisa juga konsultasi gejala covid, saya akan membantu anda.\n"
+                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)")
 
 
 def state_wise(update, context):
