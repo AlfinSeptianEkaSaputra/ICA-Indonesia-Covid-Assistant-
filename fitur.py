@@ -165,7 +165,6 @@ def indonesia(update, context):
     waktu = datetime.datetime.now()
     date = waktu.strftime('%x')
     day = waktu.strftime('%A')
-    time = waktu.strftime('%X')
     
     api = requests.get('https://api.kawalcorona.com/indonesia/')
     api_json = api.json()
@@ -187,7 +186,6 @@ def indonesia(update, context):
             '*Update*:\n'
             '_Date: {}_\n'
             '_Day: {}_\n'
-            '_Time: {}_\n'
                 .format(negara, positif, sembuh, meninggal, dirawat, date, day, time))
         update.message.reply_text(kirim, parse_mode="Markdown")
     update.message.reply_text(
@@ -201,7 +199,6 @@ def cuaca(update, context):
     waktu = datetime.datetime.now()
     date = waktu.strftime('%x')
     day = waktu.strftime('%A')
-    time = waktu.strftime('%X')
     
     if (input == "/cuaca"):
         update.message.reply_text(
@@ -241,7 +238,6 @@ def cuaca(update, context):
                    '*Update*:\n'
                    '_Date: {}_\n'
                    '_Day: {}_\n'
-                   '_Time: {}_\n'
                    .format(kota, kota, long, lat, temp, max_temp, min_temp, wind_speed, pressure, humidity, date, day, time))
             update.message.reply_text(msg, parse_mode="Markdown")
         else:
