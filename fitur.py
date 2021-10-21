@@ -229,7 +229,7 @@ def cuaca(update, context):
             long = str(response['coord']['lon'])
 
             msg = ('_Prediksi cuaca saat ini di_ *{}*\n\n'
-                   '🏙️🏙️🏙️🏙️🏙️🏙️🏙️🏙️\n'
+                   '☀️🌤️⛅🌥️☁️🌦️🌧️⛈️🌩️🌨️\n'
                    '#====================#\n'
                    'Lokasi provinsi/kota/daerah *{}*\n'
                    'Longitude: *{}*\n'
