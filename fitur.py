@@ -36,7 +36,7 @@ def help_command(update, context):
                               "/covidprov => _Kasus COVID Per Provinsi di Indonesia_ 🦠\n"
                               "/berita => _Berita Seputar Covid19_ 📺\n"
                               "/rumahsakit => _Rumah Sakit Rujukan Nasional_ 🏥\n"
-                              "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_\n\n"
+                              "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_ ☁️\n\n"
                               "Anda bisa juga konsultasi gejala covid, saya akan membantu anda"
                               "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)", parse_mode="MARKDOWN")
 
