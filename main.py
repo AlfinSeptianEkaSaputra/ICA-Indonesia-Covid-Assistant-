@@ -2,6 +2,7 @@ from telegram.ext import *
 import api as keys
 import balasan as R
 import fitur as F
+import JaringanAI as AI
 
 print("Bot Berjalan")
 
@@ -32,6 +33,8 @@ def main():
     dp.add_handler(CommandHandler("indonesia", F.indonesia))
     dp.add_handler(CallbackQueryHandler(F.tombol_))
     dp.add_handler(CommandHandler("cuaca", F.cuaca))
+    
+    dp.add_handler(CommandHandler("adminlatihbot", AI.train))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
