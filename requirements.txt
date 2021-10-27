@@ -5,5 +5,4 @@ DateTime
 numpy
 nltk
 tensorflow
-json
 pickle
