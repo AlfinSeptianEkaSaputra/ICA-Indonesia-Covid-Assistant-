@@ -3,7 +3,6 @@ googlesearch-python
 python-telegram-bot
 DateTime
 numpy
-random
 nltk
 tensorflow
 json
