@@ -1,0 +1,18 @@
+{"maksud" : [
+  {"tag": "sapaan",
+  "pola": ["hai", "halo!", "selamat pagi", "permisi", "oi"],
+  "balasan": ["halo", "ada yang bisa dibantu?", "hai!!"]},
+
+  {"tag": "pamit",
+  "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu"],
+  "balasan": ["sampai jumpa lagi", "dadah", "Semoga harimu menyenangkan!"]},
+
+  {"tag": "nama",
+  "pola": ["kamu siapa?", "siapa namamu?", "siapa kamu"],
+  "balasan": ["Saya adalah ICA, Indonesian Covid Assistant\n Saya akan membantu anda mencari informasi seputar covid-19 di Indonesia"]},
+
+  {"tag": "covid",
+  "pola": ["kasus covid hari ini", "info covid", "covid di Indonesia", "Aku mau lihat info covid", "covid", "kasus covid di", "Berikan saya info covid"],
+  "balasan": ["Anda mau info seputar covid-19? Silahkan cek di /help untuk mengakses fitur yang kita miliki", "Semoga harimu menyenangkan!"]}
+]
+}
