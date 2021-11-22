@@ -20,6 +20,10 @@ def handle_message(update, context):
 def error(update, context):
     print(f"update {update} menyebabkan error {context.error}")
 
+QUERY = range(1)
+def carijudulhoax(update, context):
+    update.message.reply_text("Masukkan berita yang menurut anda kurang meyakinkan.")
+    return QUERY
 
 def main():
     updater = Updater(keys.API_KEY, use_context=True)
@@ -28,16 +32,20 @@ def main():
     dp.add_handler(CommandHandler("start", F.start_command))
     dp.add_handler(CommandHandler("help", F.help_command))
     dp.add_handler(CommandHandler("berita", F.google))
-    dp.add_handler(CommandHandler("rumahsakit", F.rumkit))
-    dp.add_handler(CommandHandler("covidprov", F.state_wise))
     dp.add_handler(CommandHandler("indonesia", F.indonesia))
-    dp.add_handler(CallbackQueryHandler(F.tombol_))
     dp.add_handler(CommandHandler("cuaca", F.cuaca))
-    
+
+
+    obrolancarijudulhoax = ConversationHandler(
+        entry_points=[CommandHandler('deteksiberita', carijudulhoax)],
+        states={QUERY: [MessageHandler(Filters.text, F.hasilcarijudulhoax)]},
+        fallbacks=[]
+    )
+    dp.add_handler(obrolancarijudulhoax)
+
     dp.add_handler(CommandHandler("adminlatihbot", AI.train))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
-
     dp.add_error_handler(error)
 
     updater.start_polling()
