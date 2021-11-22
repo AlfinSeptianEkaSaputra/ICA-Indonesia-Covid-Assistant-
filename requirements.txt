@@ -5,4 +5,3 @@ DateTime
 numpy
 nltk
 tensorflow
-pickle
