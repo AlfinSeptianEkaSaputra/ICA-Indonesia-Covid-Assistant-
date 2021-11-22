@@ -4,4 +4,4 @@ python-telegram-bot
 DateTime
 numpy
 nltk
-tensorflow
+tensorflow-cpu
