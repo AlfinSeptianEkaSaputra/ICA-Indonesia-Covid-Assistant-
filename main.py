@@ -1,7 +1,7 @@
 from telegram.ext import *
 import api as keys
 import balasan as R
-import fitur as F
+import fitur
 import JaringanAI as AI
 
 print("Bot Berjalan")
@@ -29,16 +29,16 @@ def main():
     updater = Updater(keys.API_KEY, use_context=True)
     dp = updater.dispatcher
 
-    dp.add_handler(CommandHandler("start", F.start_command))
-    dp.add_handler(CommandHandler("help", F.help_command))
-    dp.add_handler(CommandHandler("berita", F.google))
-    dp.add_handler(CommandHandler("indonesia", F.indonesia))
-    dp.add_handler(CommandHandler("cuaca", F.cuaca))
+    dp.add_handler(CommandHandler("start", fitur.start_command))
+    dp.add_handler(CommandHandler("help", fitur.help_command))
+    dp.add_handler(CommandHandler("berita", fitur.google))
+    dp.add_handler(CommandHandler("indonesia", fitur.indonesia))
+    dp.add_handler(CommandHandler("cuaca", fitur.cuaca))
 
 
     obrolancarijudulhoax = ConversationHandler(
         entry_points=[CommandHandler('deteksiberita', carijudulhoax)],
-        states={QUERY: [MessageHandler(Filters.text, F.hasilcarijudulhoax)]},
+        states={QUERY: [MessageHandler(Filters.text, fitur.hasilcarijudulhoax)]},
         fallbacks=[]
     )
     dp.add_handler(obrolancarijudulhoax)
