@@ -78,7 +78,7 @@ def train(update, context):
     sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-    update.message.reply_text("Epoch = 200\nModel = Sequential\nTraining started")
+    update.message.reply_text("Epoch = 100\nModel = Sequential\nTraining started")
 
     hasil = model.fit(np.array(train_x), np.array(train_y), epochs=100, batch_size=5, verbose=1)
     model.save('Sampel AI/ICA_AIModel.h5', hasil)
