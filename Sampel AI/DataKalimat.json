@@ -25,7 +25,7 @@
 
   {"tag": "beritacovid",
    "pola": ["berita covid dong", "berita terbaru saat ini", "berita"],
-   "balasan": ["Apakah kamu menginginkan berita terbaru saat ini, saya memiliki fitur yang cukup menarik, ketik /berita untuk mencari berita yang ingin anda cari."]},
+   "balasan": ["Apakah kamu menginginkan berita terbaru saat ini, aku memiliki fitur yang cukup menarik, ketik /berita untuk mencari berita yang ingin kamu cari."]},
 
   {"tag": "beritahoax",
    "pola": ["apakah ada berita yang hoax", "hoax", "berita hoax"],
