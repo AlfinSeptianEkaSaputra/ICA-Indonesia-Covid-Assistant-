@@ -1,11 +1,31 @@
 {"maksud" : [
   {"tag": "sapaan",
-  "pola": ["hai ica", "halo!", "hey", "selamat pagi", "permisi", "shalom", "assalamualaikum", "selamat siang", "selamat sore", "selamat malam", "puntennn" ],
-  "balasan": ["Halo juga :)", "Ada yang bisa dibantu?", "Hai juga :)", "Hey!!"]},
+  "pola": ["hai ica", "halo!", "hey", "permisi", "puntennn" ],
+  "balasan": ["Halo 😁", "Ada yang bisa dibantu?", "Hai 😁", "Hey 😁"]},
+  
+  {"tag": "salam",
+   "pola": ["assalamualaikum", "samlekom"],
+   "balasan": ["Waalaikumsalam"]},
+  
+  {"tag": "pagi",
+   "pola": ["selamat pagi", "pagi", "good morning"],
+   "balasan": ["pagi juga 😁"]},
+  
+  {"tag": "siang",
+   "pola": ["selamat siang", "siang"],
+   "balasan": ["Selamat Siang 😁"]},
+  
+  {"tag": "sore",
+   "pola": ["selamat sore", "sore"],
+   "balasan": ["Selamat Sore 😁"]},
+  
+  {"tag": "malam",
+   "pola": ["selamat malam", "malam", "good night"],
+   "balasan": ["Selamat Malam 😁", "Malam"]},
 
   {"tag": "pamit",
   "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu", "gw pergi dulu ya", "see you", "nice to meet you"],
-  "balasan": ["Sampai jumpa lagi", "Dada", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you", "Nice to meet you"]},
+  "balasan": ["Sampai jumpa lagi 🖐️🖐️", "Dada 🖐️", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you", "Nice to meet you"]},
 
   {"tag": "nama",
   "pola": ["kamu siapa?", "siapa namamu?", "siapa kamu?", "lu siapa sih sebenernya?", "kamu namanya siapa?", "bisakah beritahu saya, saya sedang berbicara dengan siapa?", "aku harus panggil kamu apa nih?", "Tolong kasih tau namamu?", "kenalan dong"],
@@ -63,8 +83,8 @@
   "pola": ["apa saja obat harian untuk orang yang sedang isolasi mandiri ?", "obat harian"],
   "balasan": ["1. Azithromycin\n2. Oseltamivir\n3. Favipiravir\n4. Paracetamol\n5. Vitamin C\n6. Vitamin D\n"]},
 
-  {"tag": "covid",
-  "pola": ["kasus covid hari ini", "info covid", "covid di Indonesia", "Aku mau lihat info covid", "covid", "kasus covid di", "Berikan saya info covid"],
+  {"tag": "kasuscovid",
+  "pola": ["kasus covid hari ini", "info covid hari ini", "covid di Indonesia", "Aku mau lihat kasus info covid", "kasus covid terbaru", "Berikan saya info covid"],
   "balasan": ["Kamu ingin lihat info kasus baru covid?\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
 
   {"tag": "tanyakabar",
@@ -72,7 +92,7 @@
   "balasan": ["Baik banget, kamu gimana?", "Aku merasa lebih baik dari kemarin", "Mungkin ada sedikit masalah, tapi gapapa, ada yang bisa dibantu?"]},
 
   {"tag": "baik",
-  "pola": ["baik", "ok", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
+  "pola": ["baik", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
   "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Apa yang membuat kamu baik ?"]},
 
   {"tag": "buruk",
