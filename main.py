@@ -32,7 +32,7 @@ def main():
     dp.add_handler(CommandHandler("start", fitur.start_command))
     dp.add_handler(CommandHandler("help", fitur.help_command))
     dp.add_handler(CommandHandler("berita", fitur.google))
-    dp.add_handler(CommandHandler("indonesia", fitur.indonesia))
+    dp.add_handler(CommandHandler("kasusbaru", fitur.kasusbaru))
     dp.add_handler(CommandHandler("cuaca", fitur.cuaca))
 
 
