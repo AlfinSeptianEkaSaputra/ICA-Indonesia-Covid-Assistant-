@@ -11,11 +11,9 @@ from tensorflow.keras.models import load_model
 lemmatizer = WordNetLemmatizer()
 
 
-katakata = pickle.load(open('katakata.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('ICA_AIModel.h5')
-
-#==============================================================
+katakata = pickle.load(open('Sampel AI/katakata.pkl', 'rb'))
+classes = pickle.load(open('Sampel AI/classes.pkl', 'rb'))
+model = load_model('Sampel AI/ICA_AIModel.h5')
 
 def pembersihkan_kalimat(kalimat):
     text_kalimat = nltk.word_tokenize(kalimat)
@@ -57,11 +55,8 @@ def dapatkan_balasan(maksudkata, maksudkata_json):
             text_balasan = random.choice(i['balasan'])
     return text_balasan
 
-
-#============================================================
-
 def sample_responses(input_text, namauser):
-    maksud = json.loads(open('maksud.json').read())
+    maksud = json.loads(open('Sampel AI/DataKalimat.json').read())
 
     pesan_user = str(input_text)
     prediksi_arti_pesan = prediksi_kalimat(pesan_user)
