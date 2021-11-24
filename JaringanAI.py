@@ -4,6 +4,9 @@ import pickle
 import numpy as np
 
 import nltk  # punkt, wordnet
+#nltk.download('punkt')
+#nltk.download('wordnet')
+
 import telegram
 from nltk.stem import WordNetLemmatizer
 
@@ -17,7 +20,7 @@ def train(update, context):
 
     lemmatizer = WordNetLemmatizer()
 
-    maksud = json.loads(open('maksud.json').read())
+    maksud = json.loads(open('Sampel AI/DataKalimat.json').read())
 
     # ======================== Memasukkan data Latihan AI ============================
 
@@ -41,8 +44,8 @@ def train(update, context):
 
     classes = sorted(set(classes))
 
-    pickle.dump(katakata, open('katakata.pkl', 'wb'))
-    pickle.dump(classes, open('classes.pkl', 'wb'))
+    pickle.dump(katakata, open('Sampel AI/katakata.pkl', 'wb'))
+    pickle.dump(classes, open('Sampel AI/classes.pkl', 'wb'))
 
     training = []
     output_kosong = [0] * len(classes)
@@ -64,7 +67,7 @@ def train(update, context):
     train_x = list(training[:, 0])
     train_y = list(training[:, 1])
 
-    # ======================= Tubuh utama model jaringan AI =============================================
+    # ======================= Jaringan Model AI =============================================
 
     model = Sequential()
     model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
@@ -78,6 +81,6 @@ def train(update, context):
     update.message.reply_text("Epoch = 200\nModel = Sequential\nTraining started")
 
     hasil = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
-    model.save('ICA_AIModel.h5', hasil)
+    model.save('Sampel AI/ICA_AIModel.h5', hasil)
 
     update.message.reply_text("Pelatihan bot selesai")
