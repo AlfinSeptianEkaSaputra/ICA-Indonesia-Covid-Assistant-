@@ -29,7 +29,7 @@
 
   {"tag": "nama",
   "pola": ["kamu siapa?", "siapa namamu?", "siapa kamu?", "lu siapa sih sebenernya?", "kamu namanya siapa?", "bisakah beritahu saya, saya sedang berbicara dengan siapa?", "aku harus panggil kamu apa nih?", "Tolong kasih tau namamu?", "kenalan dong"],
-  "balasan": ["Aku adalah ICA, Indonesian Covid Assistant\n\nAku akan membantu Kamu mencari informasi seputar Covid-19 di Indonesia"]},
+  "balasan": ["Aku adalah ICA, Indonesian Covid Assistant\n\nAku akan membantu Kamu mencari informasi seputar Covid-19 di Indonesia\n\nCoba aja tanya aku, semua tentang covid 🤗"]},
 
   {"tag": "pengertiancovid",
   "pola": ["apa itu covid19?", "covid 19 itu apa sih?", "covid itu dari mana?", "covid19", "covid", "corona itu apa?"],
@@ -69,7 +69,7 @@
 
   {"tag": "vaksin",
   "pola": ["apa saja jenis vaksin ?", "vaksin", "jenis-jenis vaksin ?", "vaksin untuk covid 19?"],
-  "balasan": ["-Pfizer\n-Sinovac\n-Moderna\n-Oxford/AstraZeneca\n-Novavax\n-Sinopharm\n-Merah Putih\n-Sputnik V"]},
+  "balasan": ["-Pfizer\n-Sinovac\n-Moderna\n-Oxford/AstraZeneca\n-Novavax\n-Sinopharm\n-Merah Putih\n-Sputnik V\n\n"]},
 
   {"tag": "kriteria",
   "pola": ["penerima vaksin", "siapa saja orang yang berhak menerima vaksin ?", "siapa saja orang yang pantas menerima vaksin ?"],
@@ -93,7 +93,7 @@
 
   {"tag": "baik",
   "pola": ["baik", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
-  "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Apa yang membuat kamu baik ?"]},
+  "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Mantap 👍"]},
 
   {"tag": "buruk",
   "pola": ["buruk", "tidak baik baik saja", "gamood", "kenapa sih", "hari ini adalah terburukku"],
