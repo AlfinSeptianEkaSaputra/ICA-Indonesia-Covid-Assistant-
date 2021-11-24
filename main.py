@@ -6,6 +6,8 @@ import JaringanAI as AI
 
 print("Bot Berjalan")
 
+#============= Merespon Balasan ===============
+
 def handle_message(update, context):
     text = str(update.message.text).lower()
     namauser = update.message.chat.first_name
@@ -16,6 +18,7 @@ def handle_message(update, context):
 
     update.message.reply_text(response)
 
+#================ Error Handler =========================
 
 def error(update, context):
     print(f"update {update} menyebabkan error {context.error}")
@@ -24,6 +27,9 @@ QUERY = range(1)
 def carijudulhoax(update, context):
     update.message.reply_text("Masukkan berita yang menurut anda kurang meyakinkan.")
     return QUERY
+
+
+#================== Badan Utama ===========================
 
 def main():
     updater = Updater(keys.API_KEY, use_context=True)
