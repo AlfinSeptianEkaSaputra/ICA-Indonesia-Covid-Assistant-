@@ -5,10 +5,14 @@ import json
 import pandas as pd
 from telegram.ext import *
 
-# =====================================
+# ================ Import Data ============================
+
+page = requests.get('https://data.covid19.go.id/public/api/update.json').json()
+dataCovid = page['update']['penambahan']
+
 data = pd.read_csv('data.csv')
 
-# =====================================
+# ================ Eksekusi Perintah ==========================
 
 def start_command(update, context):
     namauser = update.message.chat.first_name
@@ -22,7 +26,7 @@ def help_command(update, context):
     update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
                               "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
                               "Info Covid\n"
-                              "/indonesia => _Kasus covid-19 di Indonesia_ 🇮🇩\n"
+                              "/kasusbaru => _Kasus covid-19 di Indonesia_ 🇮🇩\n"
                               "/berita => _Berita Seputar Covid19_ 📺\n"
                               "/deteksiberita => _Mendeteksi berita seputar covid, apakah hoax atau tidak_ 📺\n"
                               "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_ ☁️\n\n"
@@ -44,37 +48,22 @@ def google(update, context):
 
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.", parse_mode="MARKDOWN")
 
+def kasusbaru(update, context):
+    tambahKasus = dataCovid['jumlah_positif']
+    tambahMeninggal = dataCovid['jumlah_meninggal']
+    tambahSembuh = dataCovid['jumlah_sembuh']
+    tanggalUpdate = dataCovid['created']
 
-def indonesia(update, context):
-    waktu = datetime.datetime.now()
-    date = waktu.strftime('%x')
-    day = waktu.strftime('%A')
+    kirim = (
+        "_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n\n"
+        f"Kasus terbaru = *{tambahKasus}*\n"
+        f"Sembuh = *{tambahSembuh}*\n"
+        f"Meninggal = *{tambahMeninggal}*\n\n"
+        "#====================#\n\n"
+        f"Di update per : *{tanggalUpdate}*")
 
-    api = requests.get('https://api.kawalcorona.com/indonesia/')
-    api_json = api.json()
-    api_content = api_json
-    for wan in api_content:
-        negara = wan['name']
-        positif = wan['positif']
-        sembuh = wan['sembuh']
-        meninggal = wan['meninggal']
-        dirawat = wan['dirawat']
-        kirim = (
-            "_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n"
-            "Negara = *{}*\n"
-            "Positif = *{}*\n"
-            "Sembuh = *{}*\n"
-            "Meninggal = *{}*\n"
-            "Dirawat = *{}*\n"
-            '#====================#\n'
-            '*Update*:\n'
-            '_Date: {}_\n'
-            '_Day: {}_\n'
-                .format(negara, positif, sembuh, meninggal, dirawat, date, day))
-        update.message.reply_text(kirim, parse_mode="Markdown")
-    update.message.reply_text(
-        "Mari kita terus bersama-sama menangani pandemi ini, bergotong royong, bersatu padu karena hanya dengan cara kebersamaan ini kita akan dapat mengatasinya. Kita tidak sendiri, kita bersama dengan negara-negara lain yang juga mengalami hal yang sama untuk bersama mengatasi pandemi ini. Dan tetaplah bersabar, optimis, tetap disiplin berada di rumah, jaga jarak dalam berhubungan/berinteraksi dengan orang lain, hindari kerumunan, rajin cuci tangan, pakailah masker saat keluar rumah. Ketika kedisiplinan kuat itu kita lakukan, insyaallah kita akan kembali pada situasi dan kondisi normal dan dapat bertemu dengan saudara, bertemu dengan teman, bertemu dengan kerabat dan tetangga dalam situasi yang normal. Tapi untuk saat ini marilah kita tetap berada di rumah saja.\n\n"
-        "Pesan Sumber: https://kemlu.go.id/portal/id/read/1608/pidato/pesan-kepada-masyarakat-indonesia-terkait-covid-19-10-april-2020")
+    update.message.reply_text(kirim, parse_mode="Markdown")
+    update.message.reply_text("Mari kita bersama tetap menjaga protokol kesehatan demi melawan pandemi ini")
     update.message.reply_text("Ketik /help untuk kembali ke *MENU FITUR*.", parse_mode="MARKDOWN")
 
 
