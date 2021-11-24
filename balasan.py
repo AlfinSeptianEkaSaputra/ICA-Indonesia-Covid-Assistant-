@@ -56,7 +56,7 @@ def dapatkan_balasan(maksudkata, maksudkata_json):
     return text_balasan
 
 def sample_responses(input_text, namauser):
-    maksud = json.loads(open('Sampel AI/DataKalimat.json').read())
+    maksud = json.loads(open('Sampel AI/DataKalimat.json', encoding="utf-8").read())
 
     pesan_user = str(input_text)
     prediksi_arti_pesan = prediksi_kalimat(pesan_user)
