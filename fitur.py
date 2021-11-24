@@ -17,9 +17,10 @@ data = pd.read_csv('data.csv')
 def start_command(update, context):
     namauser = update.message.chat.first_name
     update.message.reply_text(
-        f'''Halo {namauser}\n\n'''
-        "Saya adalah ICA(Indonesian Covid Asistant). Saya bisa membantu anda mencari informasi tentang Covid 19.\n\n"
-        "Anda bisa mulai dengan mengirim\n/help untuk melihat segala fitur yang saya miliki")
+        f'''Halo {namauser} !!\n\n'''
+        "Aku adalah ICA(Indonesian Covid Asistant). Aku akan membantu kamu mencari informasi tentang Covid 19.\n\n"
+        "Kamu bisa langsung mulai chat ke aku 🤗. Apa aja bisa kok, mulai dari kasus terbaru, berita seputar covid, atau cuma mau ngobrol juga gapapa kok\n\n"
+        "Lihat di /help untuk ngeliat semua fitur yang aku miliki 👍")
 
 
 def help_command(update, context):
