@@ -1,0 +1,86 @@
+{"maksud" : [
+  {"tag": "sapaan",
+  "pola": ["hai ica", "halo!", "hey", "selamat pagi", "permisi", "shalom", "assalamualaikum", "selamat siang", "selamat sore", "selamat malam", "puntennn" ],
+  "balasan": ["Halo juga :)", "Ada yang bisa dibantu?", "Hai juga :)", "Hey!!"]},
+
+  {"tag": "pamit",
+  "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu", "gw pergi dulu ya", "see you", "nice to meet you"],
+  "balasan": ["Sampai jumpa lagi", "Dada", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you", "Nice to meet you"]},
+
+  {"tag": "nama",
+  "pola": ["kamu siapa?", "siapa namamu?", "siapa kamu?", "lu siapa sih sebenernya?", "kamu namanya siapa?", "bisakah beritahu saya, saya sedang berbicara dengan siapa?", "aku harus panggil kamu apa nih?", "Tolong kasih tau namamu?", "kenalan dong"],
+  "balasan": ["Aku adalah ICA, Indonesian Covid Assistant\n\nAku akan membantu Kamu mencari informasi seputar Covid-19 di Indonesia"]},
+
+  {"tag": "pengertiancovid",
+  "pola": ["apa itu covid19?", "covid 19 itu apa sih?", "covid itu dari mana?", "covid19", "covid", "corona itu apa?"],
+  "balasan": ["COVID-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). COVID-19 dapat menyebabkan gangguan sistem pernapasan, mulai dari gejala yang ringan seperti flu, hingga infeksi paru-paru, seperti pneumonia.COVID-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan. Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan, Tiongkok, bulan Desember 2019. COVID-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.Tidak ada batasan usia orang-orang dapat terinfeksi oleh coronavirus ini (COVID-19). Namun orang yang lebih tua, dan orang-orang dengan kondisi medis yang sudah ada sebelumnya (seperti asma, diabetes, penyakit jantung, atau tekanan darah tinggi) tampaknya lebih rentan untuk menderita sakit parah bahkan sampai kematian.\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
+
+  {"tag": "gejalacovid",
+  "pola": ["apa saja gejala covid ?", "gejala covid?", "gejala apa saja yang timbul karena covid 19?", "gejala yang timbul setelah terinfeksi covid 19"],
+  "balasan": ["Secara umum,ada 3 gejala umum yang bisa menandakan seseorang terinfeksi covid yaitu:\n> Demam (suhu tubuh diatas 38 derajat)\n> Batuk kering\n> Sesak napas\nAda beberapa gejala lain yang juga bisa muncul pada infeksi virus covid \nmeskipun lebih jarang, yaitu : \n- Diare\n- Sakit kepala\n- Konjungtivitis\n- Hilangnya kemampuan mengecap rasa\n- Hilangnya kemampuan untuk mencium bau (anosmia)\n- Ruam dikulit"]},
+
+  {"tag": "penanganan",
+  "pola": ["penanganan", "apa yang harus di lakukan jika terdapat tanda-tanda covid 19 ?", "badan saya kurang enak", "sakit", "demam"],
+  "balasan": ["Segera periksa ke dokter atau lakukan isolasi mandiri bila anda mengalami gejala infeksi virus COVID-19 seperti yang kita jelaskan sebelumnya. Terutama jika dalam 2 minggu terakhir anda berada didaerah yang memiliki kasus COVID-19 atau kontak dengan penderita COVID-19."]},
+
+  {"tag": "penularan",
+  "pola": ["bagaimana penularan covid 19 ?", "Bagaimana penularan corona ?", "penularannya bagaimana ?"],
+  "balasan": ["> Tidak sengaja menghirup percikan ludah (droplet) yang keluar saat penederita COVID-19 batuk atau bersin.\n> Memegang mulut atau hidung tanpa mencuci tangan terlibih dahulu setelah menyentuh benda yang terkena cipratan ludah penderita COVID-19\n> Kontak jarak dekat dengan penderita COVID-19"]},
+
+  {"tag": "varianviruscovid",
+  "pola": ["apa saja varian covid 19 ?", "varian cofid 19?"],
+  "balasan": [">Varian Alfa yang peda awalnya ditemukan di inggris pada september 2020\n>Varian Beta yang pada awalnya di Afrika Selatan sejak mei 2020\n>Varian Gama yang pada awalnya ditemukan di Brazil sejak November 2020\n>Varian Delta yang pada awalnya ditemukan di India sejak Oktober 2020\n>Varian Eta yang penyebaranya ditemukan dibanyak negara sejak Desember 2020\n>Varian Lota yang pada awalnya ditemukan di Amerika November 2020\n>Varian Kappa yang pada awalnya ditemukan di India sejak oktotober 2020\n>Varian Lamda yang pada awalnya ditemukan di Peru sejak Desember 2020"]},
+
+  {"tag": "infeksi",
+  "pola": ["apa penyebab infeksi virus covid19?", "infeksi"],
+  "balasan": ["Infeksi virus covid-19 disebabkan coronavirus yaitu kelompok virus yang menginfeksi sistem pernapasan. pada sebagian besar kasus, coronavirus hanya menyebabkan infeksi pernapasan ringan sedang seperti flu. Akan tetapi,virus ini juga bisa menyebabkan inefeksi pernafasan berat. seperti pneumonia,middle-east respiratory syndrome (MERS) dan severe acute respiratory syndrome (SARS)"]},
+
+  {"tag": "diagnosis",
+  "pola": ["bagaimana cara mendiagnosis seseorang terjangkit covid", "diagnosis", "cara mendiagnosisnya ?"],
+  "balasan": ["Guna memastikan diagnosis covid-19 dokter akan melakukan beberapa pemeriksaan yaitu :\n1. RAPID TEST,untuk mendekteksi antibodi (IgM dan IgG) yang diproduksi oleh tunbuh untuk melawan virus corona.\n2. RAPID TEST ANTIGEN, untuk mendektesi antigen yaitu protein yang ada dibagian virus.\n3. CT SCAN ATAU ROTGEN DADA,untuk mendektisi infitrat atau cairan di paru-paru.\n4. TEST DARAH LENGKAP,untuk memeriksa kadar sel darah putih,D-dimer dan C-reactive protein"]},
+
+  {"tag": "pengobatan",
+  "pola": ["pengobatan", "pengobatan untuk pasien covid19 ?", "bagaimana cara pengobatan virus covid 19", "apa obat untuk penderita covid 19?"],
+  "balasan": ["Belum ada obat yang bener-bener efektif untuk megatasi infeksi virus COVID-19,pilihan pengobatan akan disesuaikan dengan kondisi pasien tingkat keparahannya.Beberapa pasien dengan gejala ringan atau tanpa gejala akan disarankan untuk melakukan protokol isolasi mandiri di rumah sambil tetap melakukan langkah penyebaran pencegahan virus covid-19.Selain itu dokter juga bisa memberikan beberapa beberapa langkah meredakan gejalanya dan mencegah penyebaran virus corona, yaitu :\n- Merujuk penderita COVID-19 yang berat untuk menjalalani perawatan dan karantina di rumah sakit rujukan\n- Memberikan obat pereda demam dan nyeri yang aman dan sesuai kondisi penderita\n- Menganjurkan penderita COVID-19 untuk melakukan untuk mrlakukan isolasi mandiri\n- menganjurkan penderita covid-19 untuk banyak minum air putih "]},
+
+  {"tag": "pencegahan",
+  "pola": ["pencegahan", "bagaimana pencegahan covid 19 ?", "mencegahnya ?"],
+  "balasan": ["Untuk mencegah penyebaran COVID-19:\n- Selalu jaga jarak aman dari orang lain (minimal 1 meter), meskipun mereka tidak tampak sakit.\n- Kenakan masker di ruang publik, terutama di dalam ruangan atau jika pembatasan fisik tidak dimungkinkan.\n- Sebaiknya pilih ruang terbuka dan berventilasi baik. Buka jendela jika berada di dalam ruangan.\n- Cuci tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.\n- Ikuti vaksinasi ketika giliran Anda. Ikuti panduan setempat terkait vaksinasi.\n- Saat batuk atau bersin, tutup mulut dan hidung Anda dengan lengan atau tisu.\n- Jangan keluar rumah jika merasa tidak enak badan.\nJika demam, batuk, dan kesulitan bernapas, segera cari bantuan medis. Telepon terlebih dahulu agar penyedia layanan kesehatan dapat mengarahkan Anda ke fasilitas kesehatan yang tepat. Tindakan ini akan melindungi Anda dan mencegah penyebaran virus serta infeksi lainnya."]},
+
+  {"tag": "vaksin",
+  "pola": ["apa saja jenis vaksin ?", "vaksin", "jenis-jenis vaksin ?", "vaksin untuk covid 19?"],
+  "balasan": ["-Pfizer\n-Sinovac\n-Moderna\n-Oxford/AstraZeneca\n-Novavax\n-Sinopharm\n-Merah Putih\n-Sputnik V"]},
+
+  {"tag": "kriteria",
+  "pola": ["penerima vaksin", "siapa saja orang yang berhak menerima vaksin ?", "siapa saja orang yang pantas menerima vaksin ?"],
+  "balasan": ["-Tidak pernah terkonfirmasi menderita covid-19 atau sudah sembuh dari covid-19 minimal 3 bulan\n-Suhu tubuh normal,tidak lebih dari 37,5 derajat celcius\n-Tekanan darah di bawah 180/110 mmHg saat skrining sebelum vaksinasi\n-Ibu hamil dengan usia kandungan diatas 13 minggu serta ibu menyusui yang sehat\n-Anak-anak berusia 12 hingga 17 tahun\n-Penderita diabetes melit"]},
+
+  {"tag": "obat",
+  "pola": ["apa saja obat umum untuk orang yang terjangkit virus covid ?", "obat umum", "obat", "apa saja obat untuk orang yang sedang isolasi mandiri ?"],
+  "balasan": ["Orang Tanpa Gejala :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n\nOrang Gejala Ringan :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n- Azitromisin 500mg, 1x1 (5 tab)\n- Parasetamol 500 mg, jika perlu (10 tab)\n- Oseltamivir 75mg, 2x1 (14 tab)"]},
+
+  {"tag": "obatharian",
+  "pola": ["apa saja obat harian untuk orang yang sedang isolasi mandiri ?", "obat harian"],
+  "balasan": ["1. Azithromycin\n2. Oseltamivir\n3. Favipiravir\n4. Paracetamol\n5. Vitamin C\n6. Vitamin D\n"]},
+
+  {"tag": "covid",
+  "pola": ["kasus covid hari ini", "info covid", "covid di Indonesia", "Aku mau lihat info covid", "covid", "kasus covid di", "Berikan saya info covid"],
+  "balasan": ["Kamu ingin lihat info kasus baru covid?\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
+
+  {"tag": "tanyakabar",
+  "pola": ["apa kabar?", "bagaimana kabar hari ini?", "lagi sibuk ngurursin apa nih sekarang?", "gimana kabarmu", "kabar"],
+  "balasan": ["Baik banget, kamu gimana?", "Aku merasa lebih baik dari kemarin", "Mungkin ada sedikit masalah, tapi gapapa, ada yang bisa dibantu?"]},
+
+  {"tag": "baik",
+  "pola": ["baik", "ok", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
+  "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Apa yang membuat kamu baik ?"]},
+
+  {"tag": "buruk",
+  "pola": ["buruk", "tidak baik baik saja", "gamood", "kenapa sih", "hari ini adalah terburukku"],
+  "balasan": ["Tidak apa-apa", "Mungkin kamu butuh istirahat", "Minum es biar segar", "Tidur gih cepet!!!!", "Cukup untuk hari ini, kamu sudah lelah,tidurlah dengan tenang...."]},
+
+  {"tag": "ngapain",
+  "pola": ["ica sedang apa", "ica lagi ngapain ?", "kamu lagi ngapain ?", "lagi ngapain"],
+  "balasan": ["Saya sedang ingin menemani anda untuk mencari informasi seputar covid 19"]}
+]
+}
