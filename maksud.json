@@ -1,11 +1,11 @@
 {"maksud" : [
   {"tag": "sapaan",
   "pola": ["hai ica", "halo!", "hey", "selamat pagi", "permisi", "shalom", "assalamualaikum", "selamat siang", "selamat sore", "selamat malam", "puntennn" ],
-  "balasan": ["Halo juga :)", "Ada yang bisa dibantu?", "Hai juga :)", "Hey!!"]},
+  "balasan": ["Halo juga 😁", "Ada yang bisa dibantu?", "Hai juga 😁", "Hey 😁"]},
 
   {"tag": "pamit",
   "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu", "gw pergi dulu ya", "see you", "nice to meet you"],
-  "balasan": ["Sampai jumpa lagi", "Dada", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you", "Nice to meet you"]},
+  "balasan": ["Sampai jumpa lagi 🖐️🖐️", "Dada 🖐️🖐️", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you 🖐️"]},
 
   {"tag": "nama",
   "pola": ["kamu siapa?", "siapa namamu?", "siapa kamu?", "lu siapa sih sebenernya?", "kamu namanya siapa?", "bisakah beritahu saya, saya sedang berbicara dengan siapa?", "aku harus panggil kamu apa nih?", "Tolong kasih tau namamu?", "kenalan dong"],
@@ -13,7 +13,7 @@
 
   {"tag": "pengertiancovid",
   "pola": ["apa itu covid19?", "covid 19 itu apa sih?", "covid itu dari mana?", "covid19", "covid", "corona itu apa?"],
-  "balasan": ["COVID-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). COVID-19 dapat menyebabkan gangguan sistem pernapasan, mulai dari gejala yang ringan seperti flu, hingga infeksi paru-paru, seperti pneumonia.COVID-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan. Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan, Tiongkok, bulan Desember 2019. COVID-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.Tidak ada batasan usia orang-orang dapat terinfeksi oleh coronavirus ini (COVID-19). Namun orang yang lebih tua, dan orang-orang dengan kondisi medis yang sudah ada sebelumnya (seperti asma, diabetes, penyakit jantung, atau tekanan darah tinggi) tampaknya lebih rentan untuk menderita sakit parah bahkan sampai kematian."]},
+  "balasan": ["COVID-19 adalah penyakit yang disebabkan oleh virus severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). COVID-19 dapat menyebabkan gangguan sistem pernapasan, mulai dari gejala yang ringan seperti flu, hingga infeksi paru-paru, seperti pneumonia.COVID-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan. Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan, Tiongkok, bulan Desember 2019. COVID-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.Tidak ada batasan usia orang-orang dapat terinfeksi oleh coronavirus ini (COVID-19). Namun orang yang lebih tua, dan orang-orang dengan kondisi medis yang sudah ada sebelumnya (seperti asma, diabetes, penyakit jantung, atau tekanan darah tinggi) tampaknya lebih rentan untuk menderita sakit parah bahkan sampai kematian.\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
 
   {"tag": "gejalacovid",
   "pola": ["apa saja gejala covid ?", "gejala covid?", "gejala apa saja yang timbul karena covid 19?", "gejala yang timbul setelah terinfeksi covid 19"],
@@ -65,15 +65,15 @@
 
   {"tag": "covid",
   "pola": ["kasus covid hari ini", "info covid", "covid di Indonesia", "Aku mau lihat info covid", "covid", "kasus covid di", "Berikan saya info covid"],
-  "balasan": ["Kamu mau info seputar covid-19? Silahkan cek di /help untuk mengakses fitur yang kita miliki"]},
+  "balasan": ["Kamu ingin lihat info kasus baru covid?\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
 
   {"tag": "tanyakabar",
   "pola": ["apa kabar?", "bagaimana kabar hari ini?", "lagi sibuk ngurursin apa nih sekarang?", "gimana kabarmu", "kabar"],
   "balasan": ["Baik banget, kamu gimana?", "Aku merasa lebih baik dari kemarin", "Mungkin ada sedikit masalah, tapi gapapa, ada yang bisa dibantu?"]},
 
   {"tag": "baik",
-  "pola": ["baik", "ok", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
-  "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Apa yang membuat kamu baik ?"]},
+  "pola": ["baik", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
+  "balasan": ["Begitu juga dengan saya..", "Sama dongg...."]},
 
   {"tag": "buruk",
   "pola": ["buruk", "tidak baik baik saja", "gamood", "kenapa sih", "hari ini adalah terburukku"],
@@ -81,6 +81,6 @@
 
   {"tag": "ngapain",
   "pola": ["ica sedang apa", "ica lagi ngapain ?", "kamu lagi ngapain ?", "lagi ngapain"],
-  "balasan": ["Saya sedang ingin menemani anda untuk mencari informasi seputar covid 19"]}
+  "balasan": ["Aku lagi nemanin kamu buat nyari informasi seputar covid 19"]}
 ]
 }
