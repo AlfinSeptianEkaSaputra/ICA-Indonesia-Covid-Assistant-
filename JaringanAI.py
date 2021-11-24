@@ -80,7 +80,7 @@ def train(update, context):
 
     update.message.reply_text("Epoch = 200\nModel = Sequential\nTraining started")
 
-    hasil = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
+    hasil = model.fit(np.array(train_x), np.array(train_y), epochs=100, batch_size=5, verbose=1)
     model.save('Sampel AI/ICA_AIModel.h5', hasil)
 
     update.message.reply_text("Pelatihan bot selesai")
