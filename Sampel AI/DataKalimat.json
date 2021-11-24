@@ -1,6 +1,6 @@
 {"maksud" : [
   {"tag": "sapaan",
-  "pola": ["hai ica", "halo!", "hey", "permisi", "puntennn" ],
+  "pola": ["p","hai ica", "halo!", "hey", "permisi", "puntennn" ],
   "balasan": ["Halo 😁", "Ada yang bisa dibantu?", "Hai 😁", "Hey 😁"]},
   
   {"tag": "salam",
