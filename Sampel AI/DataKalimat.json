@@ -25,15 +25,15 @@
 
   {"tag": "beritacovid",
    "pola": ["berita covid dong", "berita terbaru saat ini", "berita"],
-   "balasan": ["Apakah anda menginginkan berita terbaru saat ini, saya memiliki fitur yang cukup menarik, ketik /berita untuk mencari berita yang ingin anda cari."]},
+   "balasan": ["Apakah kamu menginginkan berita terbaru saat ini, saya memiliki fitur yang cukup menarik, ketik /berita untuk mencari berita yang ingin anda cari."]},
 
   {"tag": "beritahoax",
    "pola": ["apakah ada berita yang hoax", "hoax", "berita hoax"],
-   "balasan": ["Apakah anda belum tentu yakin mengenai berita yang saya bagikan, ketik /deteksiberita untuk mendeteksi berita, apakah hoax atau tidak"]},
+   "balasan": ["Apakah kamu belum tentu yakin mengenai berita yang saya bagikan, ketik /deteksiberita untuk mendeteksi berita, apakah hoax atau tidak"]},
   
   {"tag": "cuaca",
    "pola": ["info cuaca", "cuaca saat ini", "cuaca"],
-   "balasan": ["Saya mempunyai fitur yang menarik juga yaitu informasi mengenai cuaca, Untuk selengkapnya anda cukup mengetik /cuaca."]},
+   "balasan": ["Aku mempunyai fitur yang menarik juga yaitu informasi mengenai cuaca, Untuk selengkapnya anda cukup mengetik /cuaca."]},
   
   {"tag": "pamit",
   "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu", "gw pergi dulu ya", "see you", "nice to meet you"],
