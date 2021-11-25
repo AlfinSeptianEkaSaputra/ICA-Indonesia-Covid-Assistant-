@@ -1,6 +1,6 @@
 from googlesearch import search
 import requests
-import datetime
+from datetime import *
 import json
 import pandas as pd
 from telegram.ext import *
@@ -24,15 +24,15 @@ def start_command(update, context):
 
 
 def help_command(update, context):
-    update.message.reply_text("Saya akan membantu anda mencari informasi seputar Covid-19\n\n"
-                              "Perintahkan saya  dengan klik atau masukkan command dibawah\n\n"
-                              "Info Covid\n"
+    update.message.reply_text("Aku bisa nemenin kamu nyari informasi seputar Covid-19\n"
+                              "Kasih tau aku kamu mau apa, nanti ku cariin di Internet 😊\n\n"
+                              "Command aku :\n"
                               "/kasusbaru => _Kasus covid-19 di Indonesia_ 🇮🇩\n"
-                              "/berita => _Berita Seputar Covid19_ 📺\n"
-                              "/deteksiberita => _Mendeteksi berita seputar covid, apakah hoax atau tidak_ 📺\n"
-                              "/cuaca => _Prediksi cuaca di Indonesia maupun di Dunia_ ☁️\n\n"
-                              "Anda bisa juga konsultasi gejala covid, saya akan membantu anda"
-                              "Atau anda hanya ingin mengobrol? Tidak apa-apa. Saya akan menemani anda :)",
+                              "/berita => _Berita terkini seputar Covid19_ 📺\n"
+                              "/deteksiberita => _Biar ku cari tau berita nya hoax atau tidak_ 🧐📺\n"
+                              "/cuaca => _Cuaca di daerah yang kamu mau_ ☁️\n\n"
+                              "Atau misal kamu mau konsultasi gejala dan pertanyaan-pertanyaan seputar Covid?\n"
+                              "Atau jangan-jangan kamu cuma mau teman ngobrol? Gapapa, aku temenin kok 🥰",
                               parse_mode="MARKDOWN")
 
 def google(update, context):
@@ -54,6 +54,8 @@ def kasusbaru(update, context):
     tambahMeninggal = dataCovid['jumlah_meninggal']
     tambahSembuh = dataCovid['jumlah_sembuh']
     tanggalUpdate = dataCovid['created']
+    tanggal = datetime.strptime(tanggalUpdate, "%Y-%m-%d %H:%M:%S")
+
 
     kirim = (
         "_Perkembangan Kasus Covid-19 di Indonesia saat ini: _\n\n"
@@ -61,7 +63,7 @@ def kasusbaru(update, context):
         f"Sembuh = *{tambahSembuh}*\n"
         f"Meninggal = *{tambahMeninggal}*\n\n"
         "#====================#\n\n"
-        f"Di update per : *{tanggalUpdate}*")
+        f"Di update per : *{tanggal.strftime('%d %B %Y')}*")
 
     update.message.reply_text(kirim, parse_mode="Markdown")
     update.message.reply_text("Mari kita bersama tetap menjaga protokol kesehatan demi melawan pandemi ini")
@@ -70,13 +72,13 @@ def kasusbaru(update, context):
 
 def cuaca(update, context):
     input = update.message.text
-    waktu = datetime.datetime.now()
-    date = waktu.strftime('%x')
+    waktu = datetime.now()
+    date = waktu.strftime('%d %B %Y')
     day = waktu.strftime('%A')
 
     if (input == "/cuaca"):
         update.message.reply_text(
-            "Tolong tambahkan nama provinsi/kota/daerah. 🏙️🏙️\nMisalkan _/cuaca kediri_.\nAtaupun _/cuaca jawa timur_.\nAtaupun _/cuaca Indonesia_.",
+            "Cuaca daerah mana?\nMasukin nama daerahnya! 🏙️🏙️\n\nMisalkan _/cuaca kediri_.\nAtaupun _/cuaca jawa timur_.\nAtau _/cuaca Indonesia_.",
             parse_mode="Markdown")
     else:
         api_url = 'https://api.openweathermap.org/data/2.5/weather?'
@@ -111,8 +113,8 @@ def cuaca(update, context):
                    'Kelembapan: *{}%*\n'
                    '#====================#\n'
                    '*Update*:\n'
-                   '_Date: {}_\n'
-                   '_Day: {}_\n'
+                   'Tanggal : {}\n'
+                   'Hari : {}\n'
                    .format(kota, kota, long, lat, temp, max_temp, min_temp, wind_speed, pressure, humidity, date, day))
             update.message.reply_text(msg, parse_mode="Markdown")
         else:
@@ -137,7 +139,7 @@ def hasilcarijudulhoax(update, context):
     update.message.reply_text(text)
 
     update.message.reply_text(
-        "Jika tidak terdapat artikel kemungkinan berita yang anda cari bukanlah *HOAX*", parse_mode="MARKDOWN")
+        "Jika tidak terdapat artikel kemungkinan berita yang kamu cari bukanlah *HOAX*", parse_mode="MARKDOWN")
     update.message.reply_text(
         "Ketik /help untuk kembali ke *MENU FITUR*, atau Ketik /deteksiberita untuk kembali mencari berita yang menurut anda kurang meyakinkan.",
         parse_mode="MARKDOWN")
