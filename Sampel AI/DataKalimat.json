@@ -2,23 +2,23 @@
   {"tag": "sapaan",
   "pola": ["p","hai ica", "halo!", "hey", "permisi", "puntennn" ],
   "balasan": ["Halo 😁", "Ada yang bisa dibantu?", "Hai 😁", "Hey 😁"]},
-  
+
   {"tag": "salam",
    "pola": ["assalamualaikum", "samlekom"],
    "balasan": ["Waalaikumsalam"]},
-  
+
   {"tag": "pagi",
    "pola": ["selamat pagi", "pagi", "good morning"],
    "balasan": ["pagi juga 😁"]},
-  
+
   {"tag": "siang",
    "pola": ["selamat siang", "siang"],
    "balasan": ["Selamat Siang 😁"]},
-  
+
   {"tag": "sore",
    "pola": ["selamat sore", "sore"],
    "balasan": ["Selamat Sore 😁"]},
-  
+
   {"tag": "malam",
    "pola": ["selamat malam", "malam", "good night"],
    "balasan": ["Selamat Malam 😁", "Malam"]},
@@ -29,12 +29,12 @@
 
   {"tag": "beritahoax",
    "pola": ["apakah ada berita yang hoax", "hoax", "berita hoax"],
-   "balasan": ["Apakah kamu belum tentu yakin mengenai berita yang aku bagikan, ketik /deteksiberita untuk mendeteksi berita, apakah hoax atau tidak"]},
-  
+   "balasan": ["Kamu ga yakin sama berita yang kamu dapat?, ketik /deteksiberita untuk mendeteksi berita, apakah hoax atau tidak"]},
+
   {"tag": "cuaca",
    "pola": ["info cuaca", "cuaca saat ini", "cuaca"],
-   "balasan": ["Aku mempunyai fitur yang menarik juga yaitu informasi mengenai cuaca, Untuk selengkapnya kamu cukup mengetik /cuaca."]},
-  
+   "balasan": ["Ketik atau tekan /cuaca buat tau cuaca saat ini."]},
+
   {"tag": "pamit",
   "pola": ["sampai jumpa!", "bye", "dadah", "jumpa lagi", "Selamat tinggal", "pergi dulu", "gw pergi dulu ya", "see you", "nice to meet you"],
   "balasan": ["Sampai jumpa lagi 🖐️🖐️", "Dada 🖐️", "Semoga harimu menyenangkan!", "Jangan lupa senyum hari ini", "See you", "Nice to meet you"]},
@@ -49,7 +49,7 @@
 
   {"tag": "gejalacovid",
   "pola": ["apa saja gejala covid ?", "gejala covid?", "gejala apa saja yang timbul karena covid 19?", "gejala yang timbul setelah terinfeksi covid 19"],
-  "balasan": ["Secara umum,ada 3 gejala umum yang bisa menandakan seseorang terinfeksi covid yaitu:\n> Demam (suhu tubuh diatas 38 derajat)\n> Batuk kering\n> Sesak napas\nAda beberapa gejala lain yang juga bisa muncul pada infeksi virus covid \nmeskipun lebih jarang, yaitu : \n- Diare\n- Sakit kepala\n- Konjungtivitis\n- Hilangnya kemampuan mengecap rasa\n- Hilangnya kemampuan untuk mencium bau (anosmia)\n- Ruam dikulit"]},
+  "balasan": ["Secara umum,ada 3 gejala umum yang bisa menandakan seseorang terinfeksi covid yaitu:\n> Demam (suhu tubuh diatas 38 derajat)\n> Batuk kering\n> Sesak napas\nAda beberapa gejala lain yang juga bisa muncul pada infeksi virus covid \nmeskipun lebih jarang, yaitu : \n- Diare\n- Sakit kepala\n- Konjungtivitis\n- Hilangnya kemampuan mengecap rasa\n- Hilangnya kemampuan untuk mencium bau (anosmia)\n- Ruam dikulit\n\nKalau kamu merasa punya gejala seperti di atas, cepat periksa! Aku gamau kamu sakit \uD83D\uDE20"]},
 
   {"tag": "penanganan",
   "pola": ["penanganan", "apa yang harus di lakukan jika terdapat tanda-tanda covid 19 ?", "badan saya kurang enak", "sakit", "demam"],
@@ -77,27 +77,27 @@
 
   {"tag": "pencegahan",
   "pola": ["pencegahan", "bagaimana pencegahan covid 19 ?", "mencegahnya ?"],
-  "balasan": ["Untuk mencegah penyebaran COVID-19 menurut website resmi Alo Dokter:\n\n- Selalu jaga jarak aman dari orang lain (minimal 1 meter), meskipun mereka tidak tampak sakit.\n- Kenakan masker di ruang publik, terutama di dalam ruangan atau jika pembatasan fisik tidak dimungkinkan.\n- Sebaiknya pilih ruang terbuka dan berventilasi baik. Buka jendela jika berada di dalam ruangan.\n- Cuci tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.\n- Ikuti vaksinasi ketika giliran Anda. Ikuti panduan setempat terkait vaksinasi.\n- Saat batuk atau bersin, tutup mulut dan hidung Anda dengan lengan atau tisu.\n- Jangan keluar rumah jika merasa tidak enak badan.\nJika demam, batuk, dan kesulitan bernapas, segera cari bantuan medis. Telepon terlebih dahulu agar penyedia layanan kesehatan dapat mengarahkan Anda ke fasilitas kesehatan yang tepat. Tindakan ini akan melindungi Anda dan mencegah penyebaran virus serta infeksi lainnya."]},
+  "balasan": ["Ada banyak cara buat mencegah covid, diantaranya :\n\n- Selalu jaga jarak aman dari orang lain (minimal 1 meter), meskipun mereka tidak tampak sakit.\n- Kenakan masker di ruang publik, terutama di dalam ruangan atau jika pembatasan fisik tidak dimungkinkan.\n- Sebaiknya pilih ruang terbuka dan berventilasi baik. Buka jendela jika berada di dalam ruangan.\n- Cuci tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.\n- Ikuti vaksinasi ketika giliran Anda. Ikuti panduan setempat terkait vaksinasi.\n- Saat batuk atau bersin, tutup mulut dan hidung Anda dengan lengan atau tisu.\n- Jangan keluar rumah jika merasa tidak enak badan.\n\nJika demam, batuk, dan kesulitan bernapas, segera cari bantuan medis. Telepon terlebih dahulu agar penyedia layanan kesehatan dapat mengarahkan Anda ke fasilitas kesehatan yang tepat. Tindakan ini akan melindungi kamu dan mencegah penyebaran virus serta infeksi lainnya."]},
 
   {"tag": "vaksin",
   "pola": ["apa saja jenis vaksin ?", "vaksin", "jenis-jenis vaksin ?", "vaksin untuk covid 19?"],
-  "balasan": ["Vaksin yang beredar saat ini menurut website resmi Alo Dokter adalah sebagai berikut:\n\n-Pfizer\n-Sinovac\n-Moderna\n-Oxford/AstraZeneca\n-Novavax\n-Sinopharm\n-Merah Putih\n-Sputnik V"]},
+  "balasan": ["Ada beberapa jenis vaksin lo di Indonesia, contohnya :\n\n-Pfizer\n-Sinovac\n-Moderna\n-Oxford/AstraZeneca\n-Novavax\n-Sinopharm\n-Merah Putih\n-Sputnik V"]},
 
   {"tag": "kriteria",
   "pola": ["penerima vaksin", "siapa saja orang yang berhak menerima vaksin ?", "siapa saja orang yang pantas menerima vaksin ?"],
-  "balasan": ["Penerima vaksin yang layak menurut website resmi Alo Dokter adalah sebagai berikut:\n\n-Tidak pernah terkonfirmasi menderita covid-19 atau sudah sembuh dari covid-19 minimal 3 bulan\n-Suhu tubuh normal,tidak lebih dari 37,5 derajat celcius\n-Tekanan darah di bawah 180/110 mmHg saat skrining sebelum vaksinasi\n-Ibu hamil dengan usia kandungan diatas 13 minggu serta ibu menyusui yang sehat\n-Anak-anak berusia 12 hingga 17 tahun\n-Penderita diabetes melit"]},
+  "balasan": ["Menurut yang aku cari,\n\nPenerima vaksin yang layak menurut website resmi Alo Dokter itu :\n\n-Tidak pernah terkonfirmasi menderita covid-19 atau sudah sembuh dari covid-19 minimal 3 bulan\n-Suhu tubuh normal,tidak lebih dari 37,5 derajat celcius\n-Tekanan darah di bawah 180/110 mmHg saat skrining sebelum vaksinasi\n-Ibu hamil dengan usia kandungan diatas 13 minggu serta ibu menyusui yang sehat\n-Anak-anak berusia 12 hingga 17 tahun\n-Penderita diabetes melit"]},
 
   {"tag": "obat",
   "pola": ["apa saja obat umum untuk orang yang terjangkit virus covid ?", "obat umum", "obat", "apa saja obat untuk orang yang sedang isolasi mandiri ?"],
-  "balasan": ["Obat yang biasa di konsumsi pasien covid menurut website resmi Alo Dokter adalah sebagai berikut:\n\nOrang Tanpa Gejala :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n\nOrang Gejala Ringan :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n- Azitromisin 500mg, 1x1 (5 tab)\n- Parasetamol 500 mg, jika perlu (10 tab)\n- Oseltamivir 75mg, 2x1 (14 tab)"]},
+  "balasan": ["Obat yang biasa di konsumsi pasien covid menurut website resmi Alo Dokter :\n\nOrang Tanpa Gejala :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n\nOrang Gejala Ringan :\n- Mutivitamin (B, C, E, Zinc), 1x1 (10 tab)\n- Azitromisin 500mg, 1x1 (5 tab)\n- Parasetamol 500 mg, jika perlu (10 tab)\n- Oseltamivir 75mg, 2x1 (14 tab)"]},
 
   {"tag": "obatharian",
   "pola": ["apa saja obat harian untuk orang yang sedang isolasi mandiri ?", "obat harian"],
-  "balasan": ["Obat yang di konsumsi harian untuk orang yang sedang isolasi menurut website resmi Halodoc adalah sebagai berikut:\n\n1. Azithromycin\n2. Oseltamivir\n3. Favipiravir\n4. Paracetamol\n5. Vitamin C\n6. Vitamin D\n"]},
+  "balasan": ["Aku udah nyari nih \uD83E\uDD13\n\nObat yang di konsumsi harian untuk orang yang sedang isolasi menurut website resmi Halodoc itu ini:\n\n1. Azithromycin\n2. Oseltamivir\n3. Favipiravir\n4. Paracetamol\n5. Vitamin C\n6. Vitamin D\n"]},
 
   {"tag": "kasuscovid",
   "pola": ["kasus covid hari ini", "info covid hari ini", "covid di Indonesia", "Aku mau lihat kasus info covid", "kasus covid terbaru", "Berikan saya info covid"],
-  "balasan": ["Kamu ingin lihat info kasus baru covid?\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
+  "balasan": ["Kamu mau lihat info kasus baru covid?\n\nSilahkan ketik atau tekan\n/kasusbaru\nuntuk melihat info terbaru"]},
 
   {"tag": "tanyakabar",
   "pola": ["apa kabar?", "bagaimana kabar hari ini?", "lagi sibuk ngurursin apa nih sekarang?", "gimana kabarmu", "kabar"],
@@ -105,7 +105,7 @@
 
   {"tag": "baik",
   "pola": ["baik", "gapapa", "tidak apa-apa", "baik baik saja", "mood sekali hari ini", "alhamdulillah baik"],
-  "balasan": ["Begitu juga dengan saya..", "Sama dongg....", "Apa yang membuat kamu baik ?"]},
+  "balasan": ["Begitu juga dengan saya..", "Sama dongg..", "Bagus"]},
 
   {"tag": "buruk",
   "pola": ["buruk", "tidak baik baik saja", "gamood", "kenapa sih", "hari ini adalah terburukku"],
@@ -113,6 +113,6 @@
 
   {"tag": "ngapain",
   "pola": ["ica sedang apa", "ica lagi ngapain ?", "kamu lagi ngapain ?", "lagi ngapain"],
-  "balasan": ["Saya sedang ingin menemani anda untuk mencari informasi seputar covid 19"]}
+  "balasan": ["Aku lagi nemenin kamu buat nyari informasi seputar covid 19 \uD83E\uDD70"]}
 ]
 }
