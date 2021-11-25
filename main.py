@@ -25,7 +25,7 @@ def error(update, context):
 
 QUERY = range(1)
 def carijudulhoax(update, context):
-    update.message.reply_text("Masukkan berita yang menurut anda kurang meyakinkan.")
+    update.message.reply_text("Masukkan berita covid yang menurut kamu kurang meyakinkan.")
     return QUERY
 
 
