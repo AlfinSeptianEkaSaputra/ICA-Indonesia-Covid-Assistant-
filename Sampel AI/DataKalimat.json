@@ -113,6 +113,34 @@
 
   {"tag": "ngapain",
   "pola": ["ica sedang apa", "ica lagi ngapain ?", "kamu lagi ngapain ?", "lagi ngapain"],
-  "balasan": ["Aku lagi nemenin kamu buat nyari informasi seputar covid 19 \uD83E\uDD70"]}
+  "balasan": ["Aku lagi nemenin kamu buat nyari informasi seputar covid 19 \uD83E\uDD70"]},
+  
+  {"tag": "sapaansayang",
+  "pola": ["sayang", "hi sayang", "hai sayang", "ica sayang"],
+  "balasan": ["Hai juga sayang 😊", "Gimana kabarmu hari ini sayang ?"]},
+  
+  {"tag": "sakit",
+  "pola": ["aku lagi sakit nih", "aku lagi ga enk badan nih", "sakit"],
+  "balasan": ["Kamu sakit apa ?"]},
+  
+  {"tag": "sakit1",
+  "pola": ["hati", "ditinggal pacar", "dicuekin pacar"],
+  "balasan": ["Kamu di cuekin pacar kamu, atau di tinggalin ??, aku bersedia kok jadi pacar kedua mu 😁😁"]},
+  
+  {"tag": "sakit2",
+  "pola": ["panas", "batuk", "pilek", "masuk angin"],
+  "balasan": ["Coba kamu periksa ke dokter takutnya nanti kamu lebih parah lagi...."]},
+  
+  {"tag": "pacar",
+  "pola": ["cariin pacar dong", "cariin aku pacar"],
+  "balasan": ["Pacar yang apa nih, LAKI-LAKI atau PEREMPUAN"]},
+  
+  {"tag": "lakilaki",
+  "pola": ["laki-laki", "laki", "maco"],
+  "balasan": ["Agak susah nih, cara jitu nya, tembak teman di dekat kamu sekarang...."]},
+  
+  {"tag": "perempuan",
+  "pola": ["perempuan", "wedok", "peyempuan"],
+  "balasan": ["Kalo kamu pengen pacar, aku bersedia kok jadi pacar kamu...", "Tembak dong perempuan yang deket sama kamu sekarang....."]}
 ]
 }
